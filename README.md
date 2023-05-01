@@ -57,7 +57,7 @@ $ lazyaws
 ```
 
 If you want, you can
-also add an alias for this with `echo "alias la='lazyaws'" >> ~/.zshrc` (or
+also add an alias for this with `echo "alias laws='lazyaws'" >> ~/.zshrc` (or
 whichever rc file you're using).
 
 ### Keybindings
