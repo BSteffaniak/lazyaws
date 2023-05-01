@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/tasks"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/tasks"
 )
 
 // given we have no fields here, arguably we shouldn't even need this factory

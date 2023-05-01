@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func getRunner() *cmdObjRunner {

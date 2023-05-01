@@ -3,12 +3,12 @@ package controllers
 import (
 	"errors"
 
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 	"github.com/samber/lo"
 )
 
-// This controller lets you change the context size for diffs. The 'context' in 'context size' refers to the conventional meaning of the word 'context' in a diff, as opposed to lazygit's own idea of a 'context'.
+// This controller lets you change the context size for diffs. The 'context' in 'context size' refers to the conventional meaning of the word 'context' in a diff, as opposed to lazyaws's own idea of a 'context'.
 
 var CONTEXT_KEYS_SHOWING_DIFFS = []types.ContextKey{
 	context.FILES_CONTEXT_KEY,

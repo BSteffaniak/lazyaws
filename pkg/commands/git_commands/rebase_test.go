@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/go-errors/errors"
-	"github.com/jesseduffield/lazygit/pkg/app/daemon"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_config"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/app/daemon"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_config"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"
 )

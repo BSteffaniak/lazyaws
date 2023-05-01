@@ -2,8 +2,8 @@ package theme
 
 import (
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
 )
 
 var (

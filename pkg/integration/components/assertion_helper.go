@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
 )
 
 type assertionHelper struct {

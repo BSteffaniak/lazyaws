@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type MenuController struct {

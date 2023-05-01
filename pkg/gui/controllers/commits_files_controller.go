@@ -2,11 +2,11 @@ package controllers
 
 import (
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/patch"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/filetree"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/patch"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/filetree"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type CommitFilesController struct {

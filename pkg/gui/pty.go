@@ -11,7 +11,7 @@ import (
 
 	"github.com/creack/pty"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func (gui *Gui) desiredPtySize() *pty.Winsize {

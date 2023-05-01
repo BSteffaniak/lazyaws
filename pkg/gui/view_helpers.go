@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/tasks"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/tasks"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/spkg/bom"
 )
 

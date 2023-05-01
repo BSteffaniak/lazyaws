@@ -15,11 +15,11 @@ import (
 
 	"github.com/kardianos/osext"
 
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/constants"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/constants"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // Updater checks for updates and does updates
@@ -219,10 +219,10 @@ func (u *Updater) zipExtension() string {
 	return "tar.gz"
 }
 
-// example: https://github.com/jesseduffield/lazygit/releases/download/v0.1.73/lazygit_0.1.73_Darwin_x86_64.tar.gz
+// example: https://github.com/BSteffaniak/lazyaws/releases/download/v0.1.73/lazyaws_0.1.73_Darwin_x86_64.tar.gz
 func (u *Updater) getBinaryUrl(newVersion string) string {
 	url := fmt.Sprintf(
-		"%s/releases/download/%s/lazygit_%s_%s_%s.%s",
+		"%s/releases/download/%s/lazyaws_%s_%s_%s.%s",
 		constants.Links.RepoUrl,
 		newVersion,
 		newVersion[1:],
@@ -254,7 +254,7 @@ func (u *Updater) downloadAndInstall(rawUrl string) error {
 	configDir := u.Config.GetUserConfigDir()
 	u.Log.Info("Download directory is " + configDir)
 
-	zipPath := filepath.Join(configDir, "temp_lazygit."+u.zipExtension())
+	zipPath := filepath.Join(configDir, "temp_lazyaws."+u.zipExtension())
 	u.Log.Info("Temp path to tarball/zip file is " + zipPath)
 
 	// remove existing zip file
@@ -278,7 +278,7 @@ func (u *Updater) downloadAndInstall(rawUrl string) error {
 
 	// Check server response
 	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("error while trying to download latest lazygit: %s", resp.Status)
+		return fmt.Errorf("error while trying to download latest lazyaws: %s", resp.Status)
 	}
 
 	// Write the body to file
@@ -288,7 +288,7 @@ func (u *Updater) downloadAndInstall(rawUrl string) error {
 	}
 
 	u.Log.Info("untarring tarball/unzipping zip file")
-	err = u.OSCommand.Cmd.New(fmt.Sprintf("tar -zxf %s %s", u.OSCommand.Quote(zipPath), "lazygit")).Run()
+	err = u.OSCommand.Cmd.New(fmt.Sprintf("tar -zxf %s %s", u.OSCommand.Quote(zipPath), "lazyaws")).Run()
 	if err != nil {
 		return err
 	}
@@ -296,9 +296,9 @@ func (u *Updater) downloadAndInstall(rawUrl string) error {
 	// the `tar` terminal cannot store things in a new location without permission
 	// so it creates it in the current directory. As such our path is fairly simple.
 	// You won't see it because it's gitignored.
-	tempLazygitFilePath := "lazygit"
+	tempLazyawsFilePath := "lazyaws"
 
-	u.Log.Infof("Path to temp binary is %s", tempLazygitFilePath)
+	u.Log.Infof("Path to temp binary is %s", tempLazyawsFilePath)
 
 	// get the path of the current binary
 	binaryPath, err := osext.Executable()
@@ -313,7 +313,7 @@ func (u *Updater) downloadAndInstall(rawUrl string) error {
 	}
 
 	// swap out the old binary for the new one
-	err = os.Rename(tempLazygitFilePath, binaryPath)
+	err = os.Rename(tempLazyawsFilePath, binaryPath)
 	if err != nil {
 		return err
 	}

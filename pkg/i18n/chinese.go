@@ -17,17 +17,17 @@ reset    重置
 package i18n
 
 const chineseIntroPopupMessage = `
-感谢使用 lazygit！你真的太棒了。下面几点你可能会感兴趣：
+感谢使用 lazyaws！你真的太棒了。下面几点你可能会感兴趣：
 
- 1) 观看此视频，快速了解 lazygit 的功能：
+ 1) 观看此视频，快速了解 lazyaws 的功能：
       https://youtu.be/CPLdltN7wgE
 
  2) 记得看看最新发行说明：
-      https://github.com/jesseduffield/lazygit/releases
+      https://github.com/BSteffaniak/lazyaws/releases
 
- 3) 使用 git 说明你是一位程序员！你可以和我们一起让 lazygit 变得更好。
+ 3) 使用 git 说明你是一位程序员！你可以和我们一起让 lazyaws 变得更好。
     考虑为本项目做些贡献吧：
-      https://github.com/jesseduffield/lazygit
+      https://github.com/BSteffaniak/lazyaws
     你也可以直接赞助，并告诉我哪里需要改进，点右下角的捐赠按钮就好了。
     哪怕只是给仓库点个星星也很棒！
 `
@@ -167,7 +167,7 @@ func chineseTranslationSet() TranslationSet {
 		NoBranchOnRemote:                    `该分支在远程上不存在. 您需要先将其推送到远程.`,
 		LcFetch:                             `抓取`,
 		NoAutomaticGitFetchTitle:            `无法自动进行 "git fetch"`,
-		NoAutomaticGitFetchBody:             `Lazygit 不能在私人仓库中使用 "git fetch"; 请在文件面板中使用 'f' 手动运行 "git fetch"`,
+		NoAutomaticGitFetchBody:             `Lazyaws 不能在私人仓库中使用 "git fetch"; 请在文件面板中使用 'f' 手动运行 "git fetch"`,
 		FileEnter:                           `暂存单个 块/行 用于文件, 或 折叠/展开 目录`,
 		FileStagingRequirements:             `只能暂存跟踪文件的单独行`,
 		StageSelection:                      `切换行暂存状态`,
@@ -275,7 +275,7 @@ func chineseTranslationSet() TranslationSet {
 		LcCommitChangesWithoutHook:          "提交更改而无需预先提交钩子",
 		SkipHookPrefixNotConfigured:         "您尚未配置用于跳过钩子的提交消息前缀。请在您的配置中设置 `git.skipHookPrefix ='WIP'`",
 		LcResetTo:                           `重置为`,
-		PressEnterToReturn:                  "按下 Enter 键返回 lazygit",
+		PressEnterToReturn:                  "按下 Enter 键返回 lazyaws",
 		LcViewStashOptions:                  "查看贮藏选项",
 		LcStashAllChanges:                   "将所有更改加入贮藏",
 		LcStashAllChangesKeepIndex:          "将已暂存的更改加入贮藏",
@@ -391,7 +391,7 @@ func chineseTranslationSet() TranslationSet {
 		LcCreateNewBranchFromCommit:         "从提交创建新分支",
 		LcBuildingPatch:                     "正在构建补丁",
 		LcViewCommits:                       "查看提交",
-		MinGitVersionError:                  "Git 版本必须至少为 2.20（即从 2018 年开始的版本）。请更新 git。或者在 https://github.com/jesseduffield/lazygit/issues 上提出一个问题，以使 lazygit 更加向后兼容。",
+		MinGitVersionError:                  "Git 版本必须至少为 2.20（即从 2018 年开始的版本）。请更新 git。或者在 https://github.com/BSteffaniak/lazyaws/issues 上提出一个问题，以使 lazyaws 更加向后兼容。",
 		LcRunningCustomCommandStatus:        "正在运行自定义命令",
 		LcSubmoduleStashAndReset:            "存放未提交的子模块更改和更新",
 		LcAndResetSubmodules:                "和重置子模块",

@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jesseduffield/lazygit/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
 	"github.com/sirupsen/logrus"
 )
 

@@ -3,11 +3,11 @@ package gui
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/theme"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func (gui *Gui) getMenuOptions() map[string]string {

@@ -2,9 +2,9 @@ package types
 
 import (
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 // these interfaces are used by the gui package so that it knows what it needs
@@ -15,7 +15,7 @@ type IntegrationTest interface {
 	SetupConfig(config *config.AppConfig)
 }
 
-// this is the interface through which our integration tests interact with the lazygit gui
+// this is the interface through which our integration tests interact with the lazyaws gui
 type GuiDriver interface {
 	PressKey(string)
 	Keys() config.KeybindingConfig
@@ -24,7 +24,7 @@ type GuiDriver interface {
 	Fail(message string)
 	// These two log methods are for the sake of debugging while testing. There's no need to actually
 	// commit any logging.
-	// logs to the normal place that you log to i.e. viewable with `lazygit --logs`
+	// logs to the normal place that you log to i.e. viewable with `lazyaws --logs`
 	Log(message string)
 	// logs in the actual UI (in the commands panel)
 	LogUI(message string)

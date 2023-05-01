@@ -3,8 +3,8 @@ package gui
 import (
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 )
 
 const SEARCH_PREFIX = "search: "
@@ -160,7 +160,7 @@ func (gui *Gui) layout(g *gocui.Gui) error {
 	}
 
 	// here is a good place log some stuff
-	// if you run `lazygit --logs`
+	// if you run `lazyaws --logs`
 	// this will let you see these branches as prettified json
 	// gui.c.Log.Info(utils.AsJson(gui.State.Model.Branches[0:4]))
 	return gui.resizeCurrentPopupPanel()

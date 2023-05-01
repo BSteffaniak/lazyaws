@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/constants"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/constants"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
 	"github.com/mattn/go-runewidth"
 )
 

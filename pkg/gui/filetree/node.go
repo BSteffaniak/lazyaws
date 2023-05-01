@@ -2,8 +2,8 @@ package filetree
 
 import (
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 // Represents a file or directory in a file tree.

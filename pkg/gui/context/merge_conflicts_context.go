@@ -4,8 +4,8 @@ import (
 	"math"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/mergeconflicts"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/mergeconflicts"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 	"github.com/sasha-s/go-deadlock"
 )
 

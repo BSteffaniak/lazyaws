@@ -5,12 +5,12 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation/icons"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/i18n"
-	"github.com/jesseduffield/lazygit/pkg/theme"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation/icons"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/i18n"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 var branchPrefixColorCache = make(map[string]style.TextStyle)

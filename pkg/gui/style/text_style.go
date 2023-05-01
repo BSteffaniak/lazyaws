@@ -14,7 +14,7 @@ import (
 // background color is RGB, we'll promote the other color component to RGB as well.
 // We could simplify this code by forcing everything to be RGB, but we're not
 // sure how compatible or efficient that would be with various terminals.
-// Lazygit will typically stick to 16-bit colors, but users may configure RGB colors.
+// Lazyaws will typically stick to 16-bit colors, but users may configure RGB colors.
 //
 // TextStyles are value objects, not entities, so for example if you want to
 // add the bold decoration to a TextStyle, we'll create a new TextStyle with

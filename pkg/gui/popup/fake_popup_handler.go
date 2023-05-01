@@ -1,6 +1,6 @@
 package popup
 
-import "github.com/jesseduffield/lazygit/pkg/gui/types"
+import "github.com/BSteffaniak/lazyaws/pkg/gui/types"
 
 type FakePopupHandler struct {
 	OnErrorMsg func(message string) error

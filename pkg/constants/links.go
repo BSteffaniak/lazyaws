@@ -18,18 +18,18 @@ var Links = struct {
 	RepoUrl     string
 	Releases    string
 }{
-	RepoUrl:     "https://github.com/jesseduffield/lazygit",
-	Issues:      "https://github.com/jesseduffield/lazygit/issues",
+	RepoUrl:     "https://github.com/BSteffaniak/lazyaws",
+	Issues:      "https://github.com/BSteffaniak/lazyaws/issues",
 	Donate:      "https://github.com/sponsors/jesseduffield",
-	Discussions: "https://github.com/jesseduffield/lazygit/discussions",
-	Releases:    "https://github.com/jesseduffield/lazygit/releases",
+	Discussions: "https://github.com/BSteffaniak/lazyaws/discussions",
+	Releases:    "https://github.com/BSteffaniak/lazyaws/releases",
 	Docs: Docs{
-		CustomPagers:      "https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md",
-		CustomKeybindings: "https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Custom_Keybindings.md",
-		CustomCommands:    "https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium",
-		Keybindings:       "https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings",
-		Undoing:           "https://github.com/jesseduffield/lazygit/blob/master/docs/Undoing.md",
-		Config:            "https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md",
+		CustomPagers:      "https://github.com/BSteffaniak/lazyaws/blob/master/docs/Custom_Pagers.md",
+		CustomKeybindings: "https://github.com/BSteffaniak/lazyaws/blob/master/docs/keybindings/Custom_Keybindings.md",
+		CustomCommands:    "https://github.com/BSteffaniak/lazyaws/wiki/Custom-Commands-Compendium",
+		Keybindings:       "https://github.com/BSteffaniak/lazyaws/blob/master/docs/keybindings",
+		Undoing:           "https://github.com/BSteffaniak/lazyaws/blob/master/docs/Undoing.md",
+		Config:            "https://github.com/BSteffaniak/lazyaws/blob/master/docs/Config.md",
 		Tutorial:          "https://youtu.be/VDXvbHZYeKY",
 	},
 }

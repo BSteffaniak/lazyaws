@@ -3,8 +3,8 @@ package gui
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 )
 
 func (gui *Gui) handleOpenSearch(viewName string) error {

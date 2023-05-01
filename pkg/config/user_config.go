@@ -303,7 +303,7 @@ type OSConfig struct {
 	EditAtLineAndWait string `yaml:"editAtLineAndWait,omitempty"`
 
 	// Whether the given edit commands use the terminal. Used to decide whether
-	// lazygit needs to suspend to the background before calling the editor.
+	// lazyaws needs to suspend to the background before calling the editor.
 	// Pointer to bool so that we can distinguish unset (nil) from false.
 	EditInTerminal *bool `yaml:"editInTerminal,omitempty"`
 

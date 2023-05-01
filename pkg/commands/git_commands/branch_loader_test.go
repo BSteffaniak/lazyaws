@@ -4,7 +4,7 @@ package git_commands
 import (
 	"testing"
 
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
 	"github.com/stretchr/testify/assert"
 )
 

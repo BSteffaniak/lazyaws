@@ -39,11 +39,11 @@ brews:
     # Repository to push the tap to.
     tap:
       owner: jesseduffield
-      name: homebrew-lazygit
+      name: homebrew-lazyaws
 
     # Your app's homepage.
     # Default is empty.
-    homepage: 'https://github.com/jesseduffield/lazygit/'
+    homepage: 'https://github.com/BSteffaniak/lazyaws/'
 
     # Your app's description.
     # Default is empty.

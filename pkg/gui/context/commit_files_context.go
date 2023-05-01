@@ -2,9 +2,9 @@ package context
 
 import (
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/filetree"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/filetree"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type CommitFilesContext struct {

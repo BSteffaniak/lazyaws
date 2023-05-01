@@ -13,7 +13,7 @@ import (
 
 func Check() {
 	dir := GetKeybindingsDir()
-	tmpDir := filepath.Join(os.TempDir(), "lazygit_cheatsheet")
+	tmpDir := filepath.Join(os.TempDir(), "lazyaws_cheatsheet")
 	err := os.RemoveAll(tmpDir)
 	if err != nil {
 		log.Fatalf("Error occurred while checking if cheatsheets are up to date: %v", err)

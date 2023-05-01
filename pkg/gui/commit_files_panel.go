@@ -1,8 +1,8 @@
 package gui
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/gui/controllers"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/controllers"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 func (gui *Gui) commitFilesRenderToMain() error {

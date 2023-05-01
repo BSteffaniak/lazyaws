@@ -4,8 +4,8 @@ import (
 	"log"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 	"github.com/samber/lo"
 )
 

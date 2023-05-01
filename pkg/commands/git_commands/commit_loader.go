@@ -11,10 +11,10 @@ import (
 
 	"github.com/fsmiamoto/git-todo-parser/todo"
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/commands/types/enums"
-	"github.com/jesseduffield/lazygit/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/types/enums"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
 )
 
 // context:
@@ -330,7 +330,7 @@ func (self *CommitLoader) getInteractiveRebasingCommits() ([]*models.Commit, err
 
 // assuming the file starts like this:
 // From e93d4193e6dd45ca9cf3a5a273d7ba6cd8b8fb20 Mon Sep 17 00:00:00 2001
-// From: Lazygit Tester <test@example.com>
+// From: Lazyaws Tester <test@example.com>
 // Date: Wed, 5 Dec 2018 21:03:23 +1100
 // Subject: second commit on master
 func (self *CommitLoader) commitFromPatch(content string) *models.Commit {

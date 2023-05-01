@@ -6,10 +6,10 @@ import (
 
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 // KeybindingCreator takes a custom command along with its handler and returns a corresponding keybinding

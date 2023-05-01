@@ -2,15 +2,15 @@
 
 Default path for the config file:
 
-- Linux: `~/.config/lazygit/config.yml`
-- MacOS: `~/Library/Application Support/lazygit/config.yml`
-- Windows: `%APPDATA%\lazygit\config.yml`
+- Linux: `~/.config/lazyaws/config.yml`
+- MacOS: `~/Library/Application Support/lazyaws/config.yml`
+- Windows: `%APPDATA%\lazyaws\config.yml`
 
 For old installations (slightly embarrassing: I didn't realise at the time that you didn't need to supply a vendor name to the path so I just used my name):
 
-- Linux: `~/.config/jesseduffield/lazygit/config.yml`
-- MacOS: `~/Library/Application\ Support/jesseduffield/lazygit/config.yml`
-- Windows: `%APPDATA%\jesseduffield\lazygit\config.yml`
+- Linux: `~/.config/BSteffaniak/lazyaws/config.yml`
+- MacOS: `~/Library/Application\ Support/BSteffaniak/lazyaws/config.yml`
+- Windows: `%APPDATA%\jesseduffield\lazyaws\config.yml`
 
 If you want to change the config directory:
 
@@ -91,7 +91,7 @@ git:
   autoRefresh: true
   branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
   allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
-  overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
+  overrideGpg: false # prevents lazyaws from spawning a separate process when using GPG
   disableForcePushing: false
   parseEmoji: false
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
@@ -277,7 +277,7 @@ for non-text files, whereas `e` opens the file in an editor. `e` can also jump
 to the right line in the file if you invoke it from the staging panel, for
 example.
 
-To tell lazygit which editor to use for the `e` command, the easiest way to do
+To tell lazyaws which editor to use for the `e` command, the easiest way to do
 that is to provide an editPreset config, e.g.
 
 ```yaml
@@ -286,7 +286,7 @@ os:
 ```
 
 Supported presets are `vim`, `emacs`, `nano`, `vscode`, `sublime`, `bbedit`, and
-`xcode`. In many cases lazygit will be able to guess the right preset from your
+`xcode`. In many cases lazyaws will be able to guess the right preset from your
 $(git config core.editor), or an environment variable such as $VISUAL or $EDITOR.
 
 If for some reason you are not happy with the default commands from a preset, or
@@ -301,24 +301,24 @@ os:
   editInTerminal: true
 ```
 
-The `editInTerminal` option is used to decide whether lazygit needs to suspend
+The `editInTerminal` option is used to decide whether lazyaws needs to suspend
 itself to the background before calling the editor.
 
 Contributions of new editor presets are welcome; see the `getPreset` function in
-[`editor_presets.go`](https://github.com/jesseduffield/lazygit/blob/master/pkg/config/editor_presets.go).
+[`editor_presets.go`](https://github.com/BSteffaniak/lazyaws/blob/master/pkg/config/editor_presets.go).
 
 ### Overriding default config file location
 
-To override the default config directory, use `CONFIG_DIR="$HOME/.config/lazygit"`. This directory contains the config file in addition to some other files lazygit uses to keep track of state across sessions.
+To override the default config directory, use `CONFIG_DIR="$HOME/.config/lazyaws"`. This directory contains the config file in addition to some other files lazyaws uses to keep track of state across sessions.
 
 To override the individual config file used, use the `--use-config-file` arg or the `LG_CONFIG_FILE` env var.
 
 If you want to merge a specific config file into a more general config file, perhaps for the sake of setting some theme-specific options, you can supply a list of comma-separated config file paths, like so:
 
 ```sh
-lazygit --use-config-file="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf"
+lazyaws --use-config-file="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf"
 or
-LG_CONFIG_FILE="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf" lazygit
+LG_CONFIG_FILE="$HOME/.base_lg_conf,$HOME/.light_theme_lg_conf" lazyaws
 ```
 
 ## Color Attributes
@@ -371,7 +371,7 @@ gui:
 
 ## Custom Author Color
 
-Lazygit will assign a random color for every commit author in the commits pane by default.
+Lazyaws will assign a random color for every commit author in the commits pane by default.
 
 You can customize the color in case you're not happy with the randomly assigned one:
 
@@ -418,7 +418,7 @@ gui:
 
 ## Keybindings
 
-For all possible keybinding options, check [Custom_Keybindings.md](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Custom_Keybindings.md)
+For all possible keybinding options, check [Custom_Keybindings.md](https://github.com/BSteffaniak/lazyaws/blob/master/docs/keybindings/Custom_Keybindings.md)
 
 You can disable certain key bindings by specifying `null`.
 
@@ -463,7 +463,7 @@ keybinding:
 ## Custom pull request URLs
 
 Some git provider setups (e.g. on-premises GitLab) can have distinct URLs for git-related calls and
-the web interface/API itself. To work with those, Lazygit needs to know where it needs to create
+the web interface/API itself. To work with those, Lazyaws needs to know where it needs to create
 the pull request. You can do so on your `config.yml` file using the following syntax:
 
 ```yaml
@@ -510,7 +510,7 @@ Result:
 
 ## Launching not in a repository behaviour
 
-By default, when launching lazygit from a directory that is not a repository,
+By default, when launching lazyaws from a directory that is not a repository,
 you will be prompted to choose if you would like to initialize a repo. You can
 override this behaviour in the config with one of the following:
 

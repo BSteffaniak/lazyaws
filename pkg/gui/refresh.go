@@ -7,17 +7,17 @@ import (
 
 	"github.com/jesseduffield/generics/set"
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/types/enums"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/filetree"
-	"github.com/jesseduffield/lazygit/pkg/gui/mergeconflicts"
-	"github.com/jesseduffield/lazygit/pkg/gui/patch_exploring"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/types/enums"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/filetree"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/mergeconflicts"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/patch_exploring"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func getScopeNames(scopes []types.RefreshableView) []string {

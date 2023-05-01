@@ -8,10 +8,10 @@ import (
 
 	"github.com/go-errors/errors"
 	gogit "github.com/jesseduffield/go-git/v5"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_config"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_config"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/sasha-s/go-deadlock"
 	"github.com/stretchr/testify/assert"
 )
@@ -151,8 +151,8 @@ func TestSetupRepository(t *testing.T) {
 		{
 			"Setup done properly",
 			func(string, *gogit.PlainOpenOptions) (*gogit.Repository, error) {
-				assert.NoError(t, os.RemoveAll("/tmp/lazygit-test"))
-				r, err := gogit.PlainInit("/tmp/lazygit-test", false)
+				assert.NoError(t, os.RemoveAll("/tmp/lazyaws-test"))
+				r, err := gogit.PlainInit("/tmp/lazyaws-test", false)
 				assert.NoError(t, err)
 				return r, nil
 			},
@@ -196,16 +196,16 @@ func TestNewGitCommand(t *testing.T) {
 			},
 			func(gitCmd *GitCommand, err error) {
 				assert.Error(t, err)
-				assert.Regexp(t, `Must open lazygit in a git repository`, err.Error())
+				assert.Regexp(t, `Must open lazyaws in a git repository`, err.Error())
 			},
 		},
 		{
 			"New GitCommand object created",
 			func() {
-				assert.NoError(t, os.RemoveAll("/tmp/lazygit-test"))
-				_, err := gogit.PlainInit("/tmp/lazygit-test", false)
+				assert.NoError(t, os.RemoveAll("/tmp/lazyaws-test"))
+				_, err := gogit.PlainInit("/tmp/lazyaws-test", false)
 				assert.NoError(t, err)
-				assert.NoError(t, os.Chdir("/tmp/lazygit-test"))
+				assert.NoError(t, os.Chdir("/tmp/lazyaws-test"))
 			},
 			func(gitCmd *GitCommand, err error) {
 				assert.NoError(t, err)

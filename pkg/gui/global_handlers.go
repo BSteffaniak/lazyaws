@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 const HORIZONTAL_SCROLL_FACTOR = 3

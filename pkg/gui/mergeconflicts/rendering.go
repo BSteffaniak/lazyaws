@@ -3,9 +3,9 @@ package mergeconflicts
 import (
 	"bytes"
 
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/theme"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func ColoredConflictFile(state *State, hasFocus bool) string {

@@ -7,9 +7,9 @@ import (
 
 	"github.com/jesseduffield/generics/slices"
 	gogit "github.com/jesseduffield/go-git/v5"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
 )
 
 type RemoteLoader struct {

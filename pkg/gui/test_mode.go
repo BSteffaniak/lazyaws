@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/integration/components"
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/components"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 type IntegrationTest interface {
@@ -37,7 +37,7 @@ func (gui *Gui) handleTestMode(test integrationTypes.IntegrationTest) {
 
 		go utils.Safe(func() {
 			time.Sleep(time.Second * 40)
-			log.Fatal("40 seconds is up, lazygit recording took too long to complete")
+			log.Fatal("40 seconds is up, lazyaws recording took too long to complete")
 		})
 	}
 }

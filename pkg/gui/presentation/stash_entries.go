@@ -2,9 +2,9 @@ package presentation
 
 import (
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation/icons"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation/icons"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 )
 
 func GetStashEntryListDisplayStrings(stashEntries []*models.StashEntry, diffName string) [][]string {

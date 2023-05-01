@@ -1,7 +1,7 @@
 package app
 
 import (
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
 )
 
 // StartArgs is the struct that represents some things we want to do on program start
@@ -10,7 +10,7 @@ type StartArgs struct {
 	FilterPath string
 	// GitArg determines what context we open in
 	GitArg GitArg
-	// integration test (only relevant when invoking lazygit in the context of an integration test)
+	// integration test (only relevant when invoking lazyaws in the context of an integration test)
 	IntegrationTest integrationTypes.IntegrationTest
 }
 

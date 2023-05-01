@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/gookit/color"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/patch"
-	"github.com/jesseduffield/lazygit/pkg/gui/filetree"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/patch"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/filetree"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/xo/terminfo"
 )

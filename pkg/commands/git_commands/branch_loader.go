@@ -7,9 +7,9 @@ import (
 	"github.com/jesseduffield/generics/set"
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/go-git/v5/config"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // context:
@@ -131,7 +131,7 @@ func (self *BranchLoader) obtainBranches() []*models.Branch {
 		if len(split) != 4 {
 			// Ignore line if it isn't separated into 4 parts
 			// This is probably a warning message, for more info see:
-			// https://github.com/jesseduffield/lazygit/issues/1385#issuecomment-885580439
+			// https://github.com/BSteffaniak/lazyaws/issues/1385#issuecomment-885580439
 			return nil, false
 		}
 

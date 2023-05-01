@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/generics/set"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 	"github.com/samber/lo"
 )
 

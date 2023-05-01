@@ -7,7 +7,7 @@ import (
 // NewDummyAppConfig creates a new dummy AppConfig for testing
 func NewDummyAppConfig() *AppConfig {
 	appConfig := &AppConfig{
-		Name:       "lazygit",
+		Name:       "lazyaws",
 		Version:    "unversioned",
 		Debug:      false,
 		UserConfig: GetDefaultConfig(),

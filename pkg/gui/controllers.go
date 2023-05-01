@@ -4,13 +4,13 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/controllers"
-	"github.com/jesseduffield/lazygit/pkg/gui/controllers/helpers"
-	"github.com/jesseduffield/lazygit/pkg/gui/modes/cherrypicking"
-	"github.com/jesseduffield/lazygit/pkg/gui/services/custom_commands"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/snake"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/controllers"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/controllers/helpers"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/modes/cherrypicking"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/services/custom_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/snake"
 )
 
 func (gui *Gui) resetControllers() {

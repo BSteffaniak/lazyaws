@@ -3,9 +3,9 @@ package controllers
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/commands/types/enums"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/types/enums"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // Quick summary of how this all works:
@@ -73,7 +73,7 @@ func (self *UndoController) Context() types.Context {
 }
 
 func (self *UndoController) reflogUndo() error {
-	undoEnvVars := []string{"GIT_REFLOG_ACTION=[lazygit undo]"}
+	undoEnvVars := []string{"GIT_REFLOG_ACTION=[lazyaws undo]"}
 	undoingStatus := self.c.Tr.UndoingStatus
 
 	if self.git.Status.WorkingTreeState() == enums.REBASE_MODE_REBASING {
@@ -121,7 +121,7 @@ func (self *UndoController) reflogUndo() error {
 }
 
 func (self *UndoController) reflogRedo() error {
-	redoEnvVars := []string{"GIT_REFLOG_ACTION=[lazygit redo]"}
+	redoEnvVars := []string{"GIT_REFLOG_ACTION=[lazyaws redo]"}
 	redoingStatus := self.c.Tr.RedoingStatus
 
 	if self.git.Status.WorkingTreeState() == enums.REBASE_MODE_REBASING {
@@ -191,9 +191,9 @@ func (self *UndoController) parseReflogForActions(onUserAction func(counter int,
 		}
 
 		if rebaseFinishCommitSha == "" {
-			if ok, _ := utils.FindStringSubmatch(reflogCommit.Name, `^\[lazygit undo\]`); ok {
+			if ok, _ := utils.FindStringSubmatch(reflogCommit.Name, `^\[lazyaws undo\]`); ok {
 				counter++
-			} else if ok, _ := utils.FindStringSubmatch(reflogCommit.Name, `^\[lazygit redo\]`); ok {
+			} else if ok, _ := utils.FindStringSubmatch(reflogCommit.Name, `^\[lazyaws redo\]`); ok {
 				counter--
 			} else if ok, _ := utils.FindStringSubmatch(reflogCommit.Name, `^rebase (-i )?\(abort\)|^rebase (-i )?\(finish\)`); ok {
 				rebaseFinishCommitSha = reflogCommit.Sha

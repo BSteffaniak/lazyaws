@@ -8,13 +8,13 @@ import (
 	"sync"
 
 	"github.com/jesseduffield/generics/slices"
-	appTypes "github.com/jesseduffield/lazygit/pkg/app/types"
-	"github.com/jesseduffield/lazygit/pkg/commands"
-	"github.com/jesseduffield/lazygit/pkg/env"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation/icons"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	appTypes "github.com/BSteffaniak/lazyaws/pkg/app/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands"
+	"github.com/BSteffaniak/lazyaws/pkg/env"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation/icons"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func (gui *Gui) getCurrentBranch(path string) string {
@@ -155,7 +155,7 @@ func (gui *Gui) dispatchSwitchToRepo(path string, reuse bool) error {
 	return gui.onNewRepo(appTypes.StartArgs{}, reuse)
 }
 
-// updateRecentRepoList registers the fact that we opened lazygit in this repo,
+// updateRecentRepoList registers the fact that we opened lazyaws in this repo,
 // so that we can open the same repo via the 'recent repos' menu
 func (gui *Gui) updateRecentRepoList() error {
 	isBareRepo, err := gui.git.Status.IsBareRepo()

@@ -2,8 +2,8 @@ package presentation
 
 import (
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 )
 
 func GetSubmoduleListDisplayStrings(submodules []*models.SubmoduleConfig) [][]string {

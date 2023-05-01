@@ -8,7 +8,7 @@ before making a change.
 
 ## PR walkthrough
 
-[This video](https://www.youtube.com/watch?v=kNavnhzZHtk) walks through the process of adding a small feature to lazygit. If you have no idea where to start, watching that video is a good first step.
+[This video](https://www.youtube.com/watch?v=kNavnhzZHtk) walks through the process of adding a small feature to lazyaws. If you have no idea where to start, watching that video is a good first step.
 
 ## All code changes happen through Pull Requests
 
@@ -21,11 +21,11 @@ welcome your pull requests:
 4. Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 5. Issue that pull request!
 
-If you've never written Go in your life, then join the club! Lazygit was the maintainer's first Go program, and most contributors have never used Go before. Go is widely considered an easy-to-learn language, so if you're looking for an open source project to gain dev experience, you've come to the right place.
+If you've never written Go in your life, then join the club! Lazyaws was the maintainer's first Go program, and most contributors have never used Go before. Go is widely considered an easy-to-learn language, so if you're looking for an open source project to gain dev experience, you've come to the right place.
 
 ## Running in a VSCode dev container
 
-If you want to spare yourself the hassle of setting up your dev environment yourself (i.e. installing Go, extensions, and extra tools), you can run the Lazygit code in a VSCode dev container like so:
+If you want to spare yourself the hassle of setting up your dev environment yourself (i.e. installing Go, extensions, and extra tools), you can run the Lazyaws code in a VSCode dev container like so:
 
 ![image](https://user-images.githubusercontent.com/8456633/201500508-0d55f99f-5035-4a6f-a0f8-eaea5c003e5d.png)
 
@@ -37,19 +37,19 @@ See [here](https://code.visualstudio.com/docs/devcontainers/containers) for more
 
 ## Running in a Github Codespace
 
-If you want to start contributing to Lazygit with the click of a button, you can open the lazygit codebase in a Codespace. First fork the repo, then click to create a codespace:
+If you want to start contributing to Lazyaws with the click of a button, you can open the lazyaws codebase in a Codespace. First fork the repo, then click to create a codespace:
 
 ![image](https://user-images.githubusercontent.com/8456633/201500566-ffe9105d-6030-4cc7-a525-6570b0b413a2.png)
 
-To run lazygit from within the integrated terminal just go `go run main.go`
+To run lazyaws from within the integrated terminal just go `go run main.go`
 
-This allows you to contribute to Lazygit without needing to install anything on your local machine. The Codespace has all the necessary tools and extensions pre-installed.
+This allows you to contribute to Lazyaws without needing to install anything on your local machine. The Codespace has all the necessary tools and extensions pre-installed.
 
 ## Code of conduct
 
 Please note by participating in this project, you agree to abide by the [code of conduct].
 
-[code of conduct]: https://github.com/jesseduffield/lazygit/blob/master/CODE-OF-CONDUCT.md
+[code of conduct]: https://github.com/BSteffaniak/lazyaws/blob/master/CODE-OF-CONDUCT.md
 
 ## Any contributions you make will be under the MIT Software License
 
@@ -57,10 +57,10 @@ In short, when you submit code changes, your submissions are understood to be
 under the same [MIT License](http://choosealicense.com/licenses/mit/) that
 covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues](https://github.com/jesseduffield/lazygit/issues)
+## Report bugs using Github's [issues](https://github.com/BSteffaniak/lazyaws/issues)
 
 We use GitHub issues to track public bugs. Report a bug by [opening a new
-issue](https://github.com/jesseduffield/lazygit/issues/new); it's that easy!
+issue](https://github.com/BSteffaniak/lazyaws/issues/new); it's that easy!
 
 ## Go
 
@@ -99,11 +99,11 @@ go install mvdan.cc/gofumpt@latest && gofumpt -l -w .
 
 ## Internationalisation
 
-Boy that's a hard word to spell. Anyway, lazygit is translated into several languages within the pkg/i18n package. If you need to render text to the user, you should add a new field to the TranslationSet struct in `pkg/i18n/english.go` and add the actual content within the `EnglishTranslationSet()` method in the same file. Then you can access via `gui.Tr.YourNewText` (or `app.Tr.YourNewText`, etc). Although it is appreciated if you translate the text into other languages, it's not expected of you (google translate will likely do a bad job anyway!).
+Boy that's a hard word to spell. Anyway, lazyaws is translated into several languages within the pkg/i18n package. If you need to render text to the user, you should add a new field to the TranslationSet struct in `pkg/i18n/english.go` and add the actual content within the `EnglishTranslationSet()` method in the same file. Then you can access via `gui.Tr.YourNewText` (or `app.Tr.YourNewText`, etc). Although it is appreciated if you translate the text into other languages, it's not expected of you (google translate will likely do a bad job anyway!).
 
 ## Debugging
 
-The easiest way to debug lazygit is to have two terminal tabs open at once: one for running lazygit (via `go run main.go -debug` in the project root) and one for viewing lazygit's logs (which can be done via `go run main.go --logs` or just `lazygit --logs`).
+The easiest way to debug lazyaws is to have two terminal tabs open at once: one for running lazyaws (via `go run main.go -debug` in the project root) and one for viewing lazyaws's logs (which can be done via `go run main.go --logs` or just `lazyaws --logs`).
 
 From most places in the codebase you have access to a logger e.g. `gui.Log.Warn("blah")`.
 
@@ -113,8 +113,8 @@ If you need to log from code in the vendor directory (e.g. the `gocui` package),
 
 ```go
 func newLogger() *logrus.Entry {
-	// REPLACE THE BELOW PATH WITH YOUR ACTUAL LOG PATH (YOU'LL SEE THIS PRINTED WHEN YOU RUN `lazygit --logs`
-	logPath := "/Users/jesseduffield/Library/Application Support/jesseduffield/lazygit/development.log"
+	// REPLACE THE BELOW PATH WITH YOUR ACTUAL LOG PATH (YOU'LL SEE THIS PRINTED WHEN YOU RUN `lazyaws --logs`
+	logPath := "/Users/jesseduffield/Library/Application Support/BSteffaniak/lazyaws/development.log"
 	file, err := os.OpenFile(logPath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		panic("unable to log to file")
@@ -130,7 +130,7 @@ var Log = newLogger()
 Log.Warn("blah")
 ```
 
-If you keep having to do some setup steps to reproduce an issue, read the Testing section below to see how to create an integration test by recording a lazygit session. It's pretty easy!
+If you keep having to do some setup steps to reproduce an issue, read the Testing section below to see how to create an integration test by recording a lazyaws session. It's pretty easy!
 
 ### VSCode debugger
 
@@ -142,13 +142,13 @@ If you want to trigger a debug session from VSCode, you can use the following sn
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "debug lazygit",
+      "name": "debug lazyaws",
       "type": "go",
       "request": "launch",
       "mode": "auto",
       "program": "main.go",
       "args": ["--debug"],
-      "console": "externalTerminal" // <-- you need this to actually see the lazygit UI in a window while debugging
+      "console": "externalTerminal" // <-- you need this to actually see the lazyaws UI in a window while debugging
     }
   ]
 }
@@ -174,7 +174,7 @@ func main() {
 	...
 ```
 
-Then run lazygit, and afterwards, from your terminal, run:
+Then run lazyaws, and afterwards, from your terminal, run:
 
 ```sh
 go tool pprof --web cpu.prof
@@ -184,31 +184,31 @@ That should open an application which allows you to view the breakdown of CPU us
 
 ## Testing
 
-Lazygit has two kinds of tests: unit tests and integration tests. Unit tests go in files that end in `_test.go`, and are written in Go. For integration tests, see [here](https://github.com/jesseduffield/lazygit/blob/master/pkg/integration/README.md)
+Lazyaws has two kinds of tests: unit tests and integration tests. Unit tests go in files that end in `_test.go`, and are written in Go. For integration tests, see [here](https://github.com/BSteffaniak/lazyaws/blob/master/pkg/integration/README.md)
 
 ## Updating Gocui
 
 Sometimes you will need to make a change in the gocui fork (https://github.com/jesseduffield/gocui). Gocui is the package responsible for rendering windows and handling user input. Here's the typical process to follow:
 
-1. Make the changes in gocui inside lazygit's vendor directory so it's easy to test against lazygit
+1. Make the changes in gocui inside lazyaws's vendor directory so it's easy to test against lazyaws
 2. Copy the changes over to the actual gocui repo (clone it if you haven't already, and use the `awesome` branch, not `master`)
 3. Raise a PR on the gocui repo with your changes
-4. After that PR is merged, make a PR in lazygit bumping the gocui version. You can bump the version by running the following at the lazygit repo root:
+4. After that PR is merged, make a PR in lazyaws bumping the gocui version. You can bump the version by running the following at the lazyaws repo root:
 
 ```sh
 ./scripts/bump_gocui.sh
 ```
 
-5. Raise a PR in lazygit with those changes
+5. Raise a PR in lazyaws with those changes
 
 ## Updating Lazycore
 
-[Lazycore](https://github.com/jesseduffield/lazycore) is a repo containing shared functionality between lazygit and lazydocker. Sometimes you will need to make a change to that repo and import the changes into lazygit. Similar to updating Gocui, here's what you do:
+[Lazycore](https://github.com/jesseduffield/lazycore) is a repo containing shared functionality between lazyaws and lazydocker. Sometimes you will need to make a change to that repo and import the changes into lazyaws. Similar to updating Gocui, here's what you do:
 
-1. Make the changes in lazycore inside lazygit's vendor directory so it's easy to test against lazygit
+1. Make the changes in lazycore inside lazyaws's vendor directory so it's easy to test against lazyaws
 2. Copy the changes over to the actual lazycore repo (clone it if you haven't already, and use the `master` branch)
 3. Raise a PR on the lazycore repo with your changes
-4. After that PR is merged, make a PR in lazygit bumping the lazycore version. You can bump the version by running the following at the lazygit repo root:
+4. After that PR is merged, make a PR in lazyaws bumping the lazycore version. You can bump the version by running the following at the lazyaws repo root:
 
 ```sh
 ./scripts/bump_lazycore.sh
@@ -216,7 +216,7 @@ Sometimes you will need to make a change in the gocui fork (https://github.com/j
 
 Or if you're using VSCode, there is a bump lazycore task you can find by going `cmd+shift+p` and typing 'Run task'
 
-5. Raise a PR in lazygit with those changes
+5. Raise a PR in lazyaws with those changes
 
 ## Improvements
 

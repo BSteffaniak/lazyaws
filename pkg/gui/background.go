@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func (gui *Gui) startBackgroundRoutines() {

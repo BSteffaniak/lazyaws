@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	"github.com/fsmiamoto/git-todo-parser/todo"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/types/enums"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/types/enums"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/samber/lo"
 )
 
@@ -343,7 +343,7 @@ func (self *LocalCommitsController) handleMidRebaseCommand(action todo.TodoComma
 
 	// for now we do not support setting 'reword' because it requires an editor
 	// and that means we either unconditionally wait around for the subprocess to ask for
-	// our input or we set a lazygit client as the EDITOR env variable and have it
+	// our input or we set a lazyaws client as the EDITOR env variable and have it
 	// request us to edit the commit message when prompted.
 	if action == todo.Reword {
 		return true, self.c.ErrorMsg(self.c.Tr.LcRewordNotSupported)

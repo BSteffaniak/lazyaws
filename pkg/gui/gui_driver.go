@@ -7,11 +7,11 @@ import (
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
 )
 
 // this gives our integration test a way of interacting with the gui for sending keypresses
@@ -61,7 +61,7 @@ func (self *GuiDriver) ContextForView(viewName string) types.Context {
 func (self *GuiDriver) Fail(message string) {
 	currentView := self.gui.g.CurrentView()
 	fullMessage := fmt.Sprintf(
-		"%s\nFinal Lazygit state:\n%s\nUpon failure, focused view was '%s'.\nLog:\n%s", message,
+		"%s\nFinal Lazyaws state:\n%s\nUpon failure, focused view was '%s'.\nLog:\n%s", message,
 		self.gui.g.Snapshot(),
 		currentView.Name(),
 		strings.Join(self.gui.CmdLog, "\n"),
@@ -73,7 +73,7 @@ func (self *GuiDriver) Fail(message string) {
 	panic(fullMessage)
 }
 
-// logs to the normal place that you log to i.e. viewable with `lazygit --logs`
+// logs to the normal place that you log to i.e. viewable with `lazyaws --logs`
 func (self *GuiDriver) Log(message string) {
 	self.gui.c.Log.Warn(message)
 }

@@ -11,14 +11,14 @@ import (
 	"strings"
 
 	"github.com/integrii/flaggy"
-	"github.com/jesseduffield/lazygit/pkg/app/daemon"
-	appTypes "github.com/jesseduffield/lazygit/pkg/app/types"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/env"
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
-	"github.com/jesseduffield/lazygit/pkg/logs"
-	"github.com/jesseduffield/lazygit/pkg/secureexec"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/app/daemon"
+	appTypes "github.com/BSteffaniak/lazyaws/pkg/app/types"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/env"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
+	"github.com/BSteffaniak/lazyaws/pkg/logs"
+	"github.com/BSteffaniak/lazyaws/pkg/secureexec"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/samber/lo"
 	"gopkg.in/yaml.v3"
 )
@@ -116,13 +116,13 @@ func Start(buildInfo *BuildInfo, integrationTest integrationTypes.IntegrationTes
 		}
 	}
 
-	tempDir, err := os.MkdirTemp("", "lazygit-*")
+	tempDir, err := os.MkdirTemp("", "lazyaws-*")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 	defer os.RemoveAll(tempDir)
 
-	appConfig, err := config.NewAppConfig("lazygit", buildInfo.Version, buildInfo.Commit, buildInfo.Date, buildInfo.BuildSource, cliArgs.Debug, tempDir)
+	appConfig, err := config.NewAppConfig("lazyaws", buildInfo.Version, buildInfo.Commit, buildInfo.Date, buildInfo.BuildSource, cliArgs.Debug, tempDir)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -156,7 +156,7 @@ func parseCliArgsAndEnvVars() *cliArgs {
 	flaggy.String(&filterPath, "f", "filter", "Path to filter on in `git log -- <path>`. When in filter mode, the commits, reflog, and stash are filtered based on the given path, and some operations are restricted")
 
 	gitArg := ""
-	flaggy.AddPositionalValue(&gitArg, "git-arg", 1, false, "Panel to focus upon opening lazygit. Accepted values (based on git terminology): status, branch, log, stash. Ignored if --filter arg is passed.")
+	flaggy.AddPositionalValue(&gitArg, "git-arg", 1, false, "Panel to focus upon opening lazyaws. Accepted values (based on git terminology): status, branch, log, stash. Ignored if --filter arg is passed.")
 
 	printVersionInfo := false
 	flaggy.Bool(&printVersionInfo, "v", "version", "Print the current version")
@@ -165,7 +165,7 @@ func parseCliArgsAndEnvVars() *cliArgs {
 	flaggy.Bool(&debug, "d", "debug", "Run in debug mode with logging (see --logs flag below). Use the LOG_LEVEL env var to set the log level (debug/info/warn/error)")
 
 	tailLogs := false
-	flaggy.Bool(&tailLogs, "l", "logs", "Tail lazygit logs (intended to be used when `lazygit --debug` is called in a separate terminal tab)")
+	flaggy.Bool(&tailLogs, "l", "logs", "Tail lazyaws logs (intended to be used when `lazyaws --debug` is called in a separate terminal tab)")
 
 	printDefaultConfig := false
 	flaggy.Bool(&printDefaultConfig, "c", "config", "Print the default config")
@@ -223,7 +223,7 @@ func parseGitArg(gitArg string) appTypes.GitArg {
 		string(appTypes.GitArgStash),
 	}
 
-	log.Fatalf("Invalid git arg value: '%s'. Must be one of the following values: %s. e.g. 'lazygit status'. See 'lazygit --help'.",
+	log.Fatalf("Invalid git arg value: '%s'. Must be one of the following values: %s. e.g. 'lazyaws status'. See 'lazyaws --help'.",
 		gitArg,
 		strings.Join(permittedValues, ", "),
 	)
@@ -231,8 +231,8 @@ func parseGitArg(gitArg string) appTypes.GitArg {
 	panic("unreachable")
 }
 
-// the buildInfo struct we get passed in is based on what's baked into the lazygit
-// binary via the LDFLAGS argument. Some lazygit distributions will make use of these
+// the buildInfo struct we get passed in is based on what's baked into the lazyaws
+// binary via the LDFLAGS argument. Some lazyaws distributions will make use of these
 // arguments and some will not. Go recently started baking in build info
 // into the binary by default e.g. the git commit hash. So in this function
 // we merge the two together, giving priority to the stuff set by LDFLAGS.
@@ -257,7 +257,7 @@ func mergeBuildInfo(buildInfo *BuildInfo) {
 	})
 	if ok {
 		buildInfo.Commit = revision.Value
-		// if lazygit was built from source we'll show the version as the
+		// if lazyaws was built from source we'll show the version as the
 		// abbreviated commit hash
 		buildInfo.Version = utils.ShortSha(revision.Value)
 	}

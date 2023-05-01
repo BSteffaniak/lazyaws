@@ -8,10 +8,10 @@ import (
 	"github.com/fsmiamoto/git-todo-parser/todo"
 	"github.com/go-errors/errors"
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/app/daemon"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/app/daemon"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 type RebaseCommands struct {
@@ -158,11 +158,11 @@ type PrepareInteractiveRebaseCommandOpts struct {
 }
 
 // PrepareInteractiveRebaseCommand returns the cmd for an interactive rebase
-// we tell git to run lazygit to edit the todo list, and we pass the client
-// lazygit a todo string to write to the todo file
+// we tell git to run lazyaws to edit the todo list, and we pass the client
+// lazyaws a todo string to write to the todo file
 func (self *RebaseCommands) PrepareInteractiveRebaseCommand(opts PrepareInteractiveRebaseCommandOpts) oscommands.ICmdObj {
 	todo := self.buildTodo(opts.todoLines)
-	ex := oscommands.GetLazygitPath()
+	ex := oscommands.GetLazyawsPath()
 	prependLines := ""
 	if opts.prepend {
 		prependLines = "TRUE"
@@ -359,14 +359,14 @@ func (self *RebaseCommands) GenericMergeOrRebaseAction(commandType string, comma
 }
 
 func (self *RebaseCommands) runSkipEditorCommand(cmdObj oscommands.ICmdObj) error {
-	lazyGitPath := oscommands.GetLazygitPath()
+	lazyAwsPath := oscommands.GetLazyawsPath()
 	return cmdObj.
 		AddEnvVars(
 			daemon.DaemonKindEnvKey+"="+string(daemon.ExitImmediately),
-			"GIT_EDITOR="+lazyGitPath,
-			"GIT_SEQUENCE_EDITOR="+lazyGitPath,
-			"EDITOR="+lazyGitPath,
-			"VISUAL="+lazyGitPath,
+			"GIT_EDITOR="+lazyAwsPath,
+			"GIT_SEQUENCE_EDITOR="+lazyAwsPath,
+			"EDITOR="+lazyAwsPath,
+			"VISUAL="+lazyAwsPath,
 		).
 		Run()
 }

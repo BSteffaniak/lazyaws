@@ -1,7 +1,7 @@
 
 FROM uffizzi/ttyd:golang1.18-alpine as build
 
-WORKDIR /go/src/github.com/jesseduffield/lazygit/
+WORKDIR /go/src/github.com/BSteffaniak/lazyaws/
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .

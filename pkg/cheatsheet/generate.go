@@ -16,11 +16,11 @@ import (
 	"github.com/jesseduffield/generics/maps"
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/lazycore/pkg/utils"
-	"github.com/jesseduffield/lazygit/pkg/app"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/i18n"
+	"github.com/BSteffaniak/lazyaws/pkg/app"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/i18n"
 	"github.com/samber/lo"
 )
 
@@ -180,7 +180,7 @@ func getHeader(binding *types.Binding, tr *i18n.TranslationSet) header {
 }
 
 func formatSections(tr *i18n.TranslationSet, bindingSections []*bindingSection) string {
-	content := fmt.Sprintf("# Lazygit %s\n", tr.Keybindings)
+	content := fmt.Sprintf("# Lazyaws %s\n", tr.Keybindings)
 
 	for _, section := range bindingSections {
 		content += formatTitle(section.title)

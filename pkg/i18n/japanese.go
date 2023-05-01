@@ -1,17 +1,17 @@
 package i18n
 
 const japaneseIntroPopupMessage = `
-Thanks for using lazygit! Seriously you rock. Three things to share with you:
+Thanks for using lazyaws! Seriously you rock. Three things to share with you:
 
- 1) If you want to learn about lazygit's features, watch this vid:
+ 1) If you want to learn about lazyaws's features, watch this vid:
       https://youtu.be/CPLdltN7wgE
 
  2) Be sure to read the latest release notes at:
-      https://github.com/jesseduffield/lazygit/releases
+      https://github.com/BSteffaniak/lazyaws/releases
 
  3) If you're using git, that makes you a programmer! With your help we can make
-    lazygit better, so consider becoming a contributor and joining the fun at
-      https://github.com/jesseduffield/lazygit
+    lazyaws better, so consider becoming a contributor and joining the fun at
+      https://github.com/BSteffaniak/lazyaws
     You can also sponsor me and tell me what to work on by clicking the donate
     button at the bottom right.
     Or even just star the repo to share the love!
@@ -141,7 +141,7 @@ func japaneseTranslationSet() TranslationSet {
 		UpdateAvailable:                  "バージョン {{.newVersion}} をインストールしますか?",
 		UpdateInProgressWaitingStatus:    "更新中",
 		UpdateCompletedTitle:             "更新完了!",
-		UpdateCompleted:                  "更新のインストールに成功しました。lazygitを再起動してください。",
+		UpdateCompleted:                  "更新のインストールに成功しました。lazyawsを再起動してください。",
 		FailedToRetrieveLatestVersionErr: "バージョン情報の取得に失敗しました",
 		OnLatestVersionErr:               "使用中のバージョンは最新です",
 		MajorVersionErr:                  "新バージョン ({{.newVersion}}) は現在のバージョン ({{.currentVersion}}) と後方互換性がありません。",
@@ -167,7 +167,7 @@ func japaneseTranslationSet() TranslationSet {
 		NoBranchOnRemote:         `ブランチがリモートに存在しません。リモートにpushしてください。`,
 		LcFetch:                  `fetch`,
 		// NoAutomaticGitFetchTitle:            `No automatic git fetch`,
-		// NoAutomaticGitFetchBody:             `Lazygit can't use "git fetch" in a private repo; use 'f' in the files panel to run "git fetch" manually`,
+		// NoAutomaticGitFetchBody:             `Lazyaws can't use "git fetch" in a private repo; use 'f' in the files panel to run "git fetch" manually`,
 		// FileEnter:                           `stage individual hunks/lines for file, or collapse/expand for directory`,
 		// FileStagingRequirements:             `Can only stage individual lines for tracked files`,
 		StageSelection:          `選択行をステージ/アンステージ`,
@@ -403,7 +403,7 @@ func japaneseTranslationSet() TranslationSet {
 		LcCreateNewBranchFromCommit:  "コミットにブランチを作成",
 		LcBuildingPatch:              "パッチを構築",
 		LcViewCommits:                "コミットを閲覧",
-		MinGitVersionError:           "lazygitの実行にはGit 2.20以降のバージョンが必要です。Gitを更新してください。もしくは、lazygitの後方互換性を改善するために https://github.com/jesseduffield/lazygit/issues にissueを作成してください。",
+		MinGitVersionError:           "lazyawsの実行にはGit 2.20以降のバージョンが必要です。Gitを更新してください。もしくは、lazyawsの後方互換性を改善するために https://github.com/BSteffaniak/lazyaws/issues にissueを作成してください。",
 		LcRunningCustomCommandStatus: "カスタムコマンドを実行",
 		// LcSubmoduleStashAndReset:            "stash uncommitted submodule changes and update",
 		// LcAndResetSubmodules:                "and reset submodules",

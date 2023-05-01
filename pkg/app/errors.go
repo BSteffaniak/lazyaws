@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/i18n"
+	"github.com/BSteffaniak/lazyaws/pkg/i18n"
 )
 
 type errorMapping struct {

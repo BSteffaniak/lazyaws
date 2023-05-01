@@ -45,12 +45,12 @@ func generateCode() []byte {
 	})
 
 	var buf bytes.Buffer
-	fmt.Fprintf(&buf, "// THIS FILE IS AUTO-GENERATED. You can regenerate it by running `go generate ./...` at the root of the lazygit repo.\n\n")
+	fmt.Fprintf(&buf, "// THIS FILE IS AUTO-GENERATED. You can regenerate it by running `go generate ./...` at the root of the lazyaws repo.\n\n")
 	fmt.Fprintf(&buf, "package tests\n\n")
 	fmt.Fprintf(&buf, "import (\n")
-	fmt.Fprintf(&buf, "\t\"github.com/jesseduffield/lazygit/pkg/integration/components\"\n")
+	fmt.Fprintf(&buf, "\t\"github.com/BSteffaniak/lazyaws/pkg/integration/components\"\n")
 	for _, dir := range directories {
-		fmt.Fprintf(&buf, "\t\"github.com/jesseduffield/lazygit/pkg/integration/tests/%s\"\n", dir.Name())
+		fmt.Fprintf(&buf, "\t\"github.com/BSteffaniak/lazyaws/pkg/integration/tests/%s\"\n", dir.Name())
 	}
 	fmt.Fprintf(&buf, ")\n\n")
 	fmt.Fprintf(&buf, "var tests = []*components.IntegrationTest{\n")

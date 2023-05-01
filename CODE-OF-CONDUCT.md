@@ -1,3 +1,3 @@
-# Lazygit Code of Conduct
+# Lazyaws Code of Conduct
 
 Be nice, or face the wrath of the maintainer.

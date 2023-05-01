@@ -1,6 +1,6 @@
 # Custom Command Keybindings
 
-You can add custom command keybindings in your config.yml (accessible by pressing 'o' on the status panel from within lazygit) like so:
+You can add custom command keybindings in your config.yml (accessible by pressing 'o' on the status panel from within lazyaws) like so:
 
 ```yml
 customCommands:
@@ -69,7 +69,7 @@ Custom command keybindings will appear alongside inbuilt keybindings when you vi
 For a given custom command, here are the allowed fields:
 | _field_ | _description_ | required |
 |-----------------|----------------------|-|
-| key | the key to trigger the command. Use a single letter or one of the values from [here](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Custom_Keybindings.md) | yes |
+| key | the key to trigger the command. Use a single letter or one of the values from [here](https://github.com/BSteffaniak/lazyaws/blob/master/docs/keybindings/Custom_Keybindings.md) | yes |
 | command | the command to run | yes |
 | context | the context in which to listen for the key (see below) | yes |
 | subprocess | whether you want the command to run in a subprocess (necessary if you want to view the output of the command or provide user input) | no |
@@ -113,7 +113,7 @@ The permitted prompt fields are:
 |                   | menu options                                                                                   |            |
 | filter            | (only applicable to 'menuFromCommand' prompts) the regexp to run specifying groups which are going to be kept from the command's output      | yes        |
 | valueFormat       | (only applicable to 'menuFromCommand' prompts) how to format matched groups from the filter to construct a menu item's value (What gets appended to prompt responses when the item is selected). You can use named groups, or `{{ .group_GROUPID }}`. PS: named groups keep first match only | yes        |
-| labelFormat       | (only applicable to 'menuFromCommand' prompts) how to format matched groups from the filter to construct the item's label (What's shown on screen). You can use named groups, or `{{ .group_GROUPID }}`. You can also color each match with `{{ .group_GROUPID \| colorname }}` (Color names from [here](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)). If `labelFormat` is not specified, `valueFormat` is shown instead. PS: named groups keep first match only | no         |
+| labelFormat       | (only applicable to 'menuFromCommand' prompts) how to format matched groups from the filter to construct the item's label (What's shown on screen). You can use named groups, or `{{ .group_GROUPID }}`. You can also color each match with `{{ .group_GROUPID \| colorname }}` (Color names from [here](https://github.com/BSteffaniak/lazyaws/blob/master/docs/Config.md)). If `labelFormat` is not specified, `valueFormat` is shown instead. PS: named groups keep first match only | no         |
 
 The permitted option fields are:
 | _field_ | _description_ | _required_ |
@@ -153,16 +153,16 @@ SelectedCommitFile
 CheckedOutBranch
 ```
 
-To see what fields are available on e.g. the `SelectedFile`, see [here](https://github.com/jesseduffield/lazygit/blob/master/pkg/commands/models/file.go) (all the modelling lives in the same directory). Note that the custom commands feature does not guarantee backwards compatibility (until we hit lazygit version 1.0 of course) which means a field you're accessing on an object may no longer be available from one release to the next. Typically however, all you'll need is `{{.SelectedFile.Name}}`, `{{.SelectedLocalCommit.Sha}}` and `{{.SelectedLocalBranch.Name}}`. In the future we will likely introduce a tighter interface that exposes a limited set of fields for each model.
+To see what fields are available on e.g. the `SelectedFile`, see [here](https://github.com/BSteffaniak/lazyaws/blob/master/pkg/commands/models/file.go) (all the modelling lives in the same directory). Note that the custom commands feature does not guarantee backwards compatibility (until we hit lazyaws version 1.0 of course) which means a field you're accessing on an object may no longer be available from one release to the next. Typically however, all you'll need is `{{.SelectedFile.Name}}`, `{{.SelectedLocalCommit.Sha}}` and `{{.SelectedLocalBranch.Name}}`. In the future we will likely introduce a tighter interface that exposes a limited set of fields for each model.
 
 ### Keybinding collisions
 
-If your custom keybinding collides with an inbuilt keybinding that is defined for the same context, only the custom keybinding will be executed. This also applies to the global context. However, one caveat is that if you have a custom keybinding defined on the global context for some key, and there is an in-built keybinding defined for the same key and for a specific context (say the 'files' context), then the in-built keybinding will take precedence. See how to change in-built keybindings [here](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#keybindings)
+If your custom keybinding collides with an inbuilt keybinding that is defined for the same context, only the custom keybinding will be executed. This also applies to the global context. However, one caveat is that if you have a custom keybinding defined on the global context for some key, and there is an in-built keybinding defined for the same key and for a specific context (say the 'files' context), then the in-built keybinding will take precedence. See how to change in-built keybindings [here](https://github.com/BSteffaniak/lazyaws/blob/master/docs/Config.md#keybindings)
 
 ### Debugging
 
-If you want to verify that your command actually does what you expect, you can wrap it in an 'echo' call and set `showOutput: true` so that it doesn't actually execute the command but you can see how the placeholders were resolved. Alternatively you can run lazygit in debug mode with `lazygit --debug` and in another terminal window run `lazygit --logs` to see which commands are actually run
+If you want to verify that your command actually does what you expect, you can wrap it in an 'echo' call and set `showOutput: true` so that it doesn't actually execute the command but you can see how the placeholders were resolved. Alternatively you can run lazyaws in debug mode with `lazyaws --debug` and in another terminal window run `lazyaws --logs` to see which commands are actually run
 
 ### More Examples
 
-See the [wiki](https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium) page for more examples, and feel free to add your own custom commands to this page so others can benefit!
+See the [wiki](https://github.com/BSteffaniak/lazyaws/wiki/Custom-Commands-Compendium) page for more examples, and feel free to add your own custom commands to this page so others can benefit!

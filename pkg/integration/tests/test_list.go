@@ -1,30 +1,30 @@
-// THIS FILE IS AUTO-GENERATED. You can regenerate it by running `go generate ./...` at the root of the lazygit repo.
+// THIS FILE IS AUTO-GENERATED. You can regenerate it by running `go generate ./...` at the root of the lazyaws repo.
 
 package tests
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/integration/components"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/bisect"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/branch"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/cherry_pick"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/commit"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/config"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/conflicts"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/custom_commands"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/diff"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/file"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/filter_by_path"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/interactive_rebase"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/misc"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/patch_building"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/reflog"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/staging"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/stash"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/submodule"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/sync"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/tag"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/ui"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests/undo"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/bisect"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/branch"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/cherry_pick"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/commit"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/config"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/conflicts"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/custom_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/diff"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/file"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/filter_by_path"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/interactive_rebase"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/misc"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/patch_building"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/reflog"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/staging"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/stash"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/submodule"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/sync"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/tag"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/ui"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests/undo"
 )
 
 var tests = []*components.IntegrationTest{

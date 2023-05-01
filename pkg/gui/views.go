@@ -3,7 +3,7 @@ package gui
 import (
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
 )
 
 type Views struct {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/go-errors/errors"
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
 )
 
 type Views struct {

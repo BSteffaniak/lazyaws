@@ -1,8 +1,8 @@
 package diff
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/config"
-	. "github.com/jesseduffield/lazygit/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	. "github.com/BSteffaniak/lazyaws/pkg/integration/components"
 )
 
 var DiffAndApplyPatch = NewIntegrationTest(NewIntegrationTestArgs{

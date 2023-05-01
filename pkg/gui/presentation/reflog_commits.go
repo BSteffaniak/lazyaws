@@ -3,10 +3,10 @@ package presentation
 import (
 	"github.com/jesseduffield/generics/set"
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/theme"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/theme"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/kyokomi/emoji/v2"
 )
 

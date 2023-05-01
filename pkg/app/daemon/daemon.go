@@ -6,16 +6,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/env"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/env"
 )
 
-// Sometimes lazygit will be invoked in daemon mode from a parent lazygit process.
+// Sometimes lazyaws will be invoked in daemon mode from a parent lazyaws process.
 // We do this when git lets us supply a program to run within a git command.
 // For example, if we want to ensure that a git command doesn't hang due to
-// waiting for an editor to save a commit message, we can tell git to invoke lazygit
-// as the editor via 'GIT_EDITOR=lazygit', and use the env var
-// 'LAZYGIT_DAEMON_KIND=EXIT_IMMEDIATELY' to specify that we want to run lazygit
+// waiting for an editor to save a commit message, we can tell git to invoke lazyaws
+// as the editor via 'GIT_EDITOR=lazyaws', and use the env var
+// 'LAZYAWS_DAEMON_KIND=EXIT_IMMEDIATELY' to specify that we want to run lazyaws
 // as a daemon which simply exits immediately. Any additional arguments we want
 // to pass to a daemon can be done via other env vars.
 
@@ -27,13 +27,13 @@ const (
 )
 
 const (
-	DaemonKindEnvKey string = "LAZYGIT_DAEMON_KIND"
-	RebaseTODOEnvKey string = "LAZYGIT_REBASE_TODO"
+	DaemonKindEnvKey string = "LAZYAWS_DAEMON_KIND"
+	RebaseTODOEnvKey string = "LAZYAWS_REBASE_TODO"
 
 	// The `PrependLinesEnvKey` env variable is set to `true` to tell our daemon
 	// to prepend the content of `RebaseTODOEnvKey` to the default `git-rebase-todo`
 	// file instead of using it as a replacement.
-	PrependLinesEnvKey string = "LAZYGIT_PREPEND_LINES"
+	PrependLinesEnvKey string = "LAZYAWS_PREPEND_LINES"
 )
 
 type Daemon interface {
@@ -77,7 +77,7 @@ type rebaseDaemon struct {
 }
 
 func (self *rebaseDaemon) Run() error {
-	self.c.Log.Info("Lazygit invoked as interactive rebase demon")
+	self.c.Log.Info("Lazyaws invoked as interactive rebase demon")
 	self.c.Log.Info("args: ", os.Args)
 	path := os.Args[1]
 
@@ -87,7 +87,7 @@ func (self *rebaseDaemon) Run() error {
 		// if we are rebasing and squashing, we'll see a COMMIT_EDITMSG
 		// but in this case we don't need to edit it, so we'll just return
 	} else {
-		self.c.Log.Info("Lazygit demon did not match on any use cases")
+		self.c.Log.Info("Lazyaws demon did not match on any use cases")
 	}
 
 	return nil

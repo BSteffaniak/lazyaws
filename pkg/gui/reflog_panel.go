@@ -1,6 +1,6 @@
 package gui
 
-import "github.com/jesseduffield/lazygit/pkg/gui/types"
+import "github.com/BSteffaniak/lazyaws/pkg/gui/types"
 
 func (gui *Gui) reflogCommitsRenderToMain() error {
 	commit := gui.State.Contexts.ReflogCommits.GetSelected()

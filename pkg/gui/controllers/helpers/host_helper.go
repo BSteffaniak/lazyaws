@@ -1,9 +1,9 @@
 package helpers
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/hosting_service"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/hosting_service"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 // this helper just wraps our hosting_service package

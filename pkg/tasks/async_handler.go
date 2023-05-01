@@ -1,7 +1,7 @@
 package tasks
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/sasha-s/go-deadlock"
 )
 

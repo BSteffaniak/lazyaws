@@ -1,9 +1,9 @@
 package types
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/gui/modes/cherrypicking"
-	"github.com/jesseduffield/lazygit/pkg/gui/modes/diffing"
-	"github.com/jesseduffield/lazygit/pkg/gui/modes/filtering"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/modes/cherrypicking"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/modes/diffing"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/modes/filtering"
 )
 
 type Modes struct {

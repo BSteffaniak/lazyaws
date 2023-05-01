@@ -1,12 +1,12 @@
 package bisect
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/config"
-	. "github.com/jesseduffield/lazygit/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	. "github.com/BSteffaniak/lazyaws/pkg/integration/components"
 )
 
 var FromOtherBranch = NewIntegrationTest(NewIntegrationTestArgs{
-	Description:  "Opening lazygit when bisect has been started from another branch. There's an issue where we don't reselect the current branch if we mark the current branch as bad so this test side-steps that problem",
+	Description:  "Opening lazyaws when bisect has been started from another branch. There's an issue where we don't reselect the current branch if we mark the current branch as bad so this test side-steps that problem",
 	ExtraCmdArgs: "",
 	Skip:         false,
 	SetupRepo: func(shell *Shell) {

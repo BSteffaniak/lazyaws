@@ -32,7 +32,7 @@ func GetProjectRoot() string {
 	if err != nil {
 		panic(err)
 	}
-	return strings.Split(dir, "lazygit")[0] + "lazygit"
+	return strings.Split(dir, "lazyaws")[0] + "lazyaws"
 }
 
 // Loader dumps a string to be displayed as a loader

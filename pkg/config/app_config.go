@@ -10,12 +10,12 @@ import (
 	yaml "github.com/jesseduffield/yaml"
 )
 
-// AppConfig contains the base configuration fields required for lazygit.
+// AppConfig contains the base configuration fields required for lazyaws.
 type AppConfig struct {
 	Debug            bool   `long:"debug" env:"DEBUG" default:"false"`
 	Version          string `long:"version" env:"VERSION" default:"unversioned"`
 	BuildDate        string `long:"build-date" env:"BUILD_DATE"`
-	Name             string `long:"name" env:"NAME" default:"lazygit"`
+	Name             string `long:"name" env:"NAME" default:"lazyaws"`
 	BuildSource      string `long:"build-source" env:"BUILD_SOURCE" default:""`
 	UserConfig       *UserConfig
 	UserConfigPaths  []string
@@ -114,7 +114,7 @@ func configDirForVendor(vendor string) string {
 	if envConfigDir != "" {
 		return envConfigDir
 	}
-	configDirs := xdg.New(vendor, "lazygit")
+	configDirs := xdg.New(vendor, "lazyaws")
 	return configDirs.ConfigHome()
 }
 
@@ -287,7 +287,7 @@ type AppState struct {
 	RecentRepos         []string
 	StartupPopupVersion int
 
-	// these are for custom commands typed in directly, not for custom commands in the lazygit config
+	// these are for custom commands typed in directly, not for custom commands in the lazyaws config
 	CustomCommandsHistory []string
 	HideCommandLog        bool
 }

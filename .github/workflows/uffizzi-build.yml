@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-application:
-    name: Build and Push `lazygit`
+    name: Build and Push `lazyaws`
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' || github.event.action != 'closed' }}
     outputs:

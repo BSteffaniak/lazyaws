@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jesseduffield/lazygit/pkg/app"
-	"github.com/jesseduffield/lazygit/pkg/app/daemon"
-	"github.com/jesseduffield/lazygit/pkg/integration/components"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests"
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
+	"github.com/BSteffaniak/lazyaws/pkg/app"
+	"github.com/BSteffaniak/lazyaws/pkg/app/daemon"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests"
+	integrationTypes "github.com/BSteffaniak/lazyaws/pkg/integration/types"
 )
 
-// The purpose of this program is to run lazygit with an integration test passed in.
+// The purpose of this program is to run lazyaws with an integration test passed in.
 // We could have done the check on TEST_NAME in the root main.go but
-// that would mean lazygit would be depending on integration test code which
+// that would mean lazyaws would be depending on integration test code which
 // would bloat the binary.
 
 // You should not invoke this program directly. Instead you should go through
@@ -34,7 +34,7 @@ func main() {
 
 func getIntegrationTest() integrationTypes.IntegrationTest {
 	if daemon.InDaemonMode() {
-		// if we've invoked lazygit as a daemon from within lazygit,
+		// if we've invoked lazyaws as a daemon from within lazyaws,
 		// we don't want to pass a test to the rest of the code.
 		return nil
 	}

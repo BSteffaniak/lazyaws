@@ -6,12 +6,12 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/commands/types/enums"
-	"github.com/jesseduffield/lazygit/pkg/constants"
-	"github.com/jesseduffield/lazygit/pkg/gui/presentation"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/types/enums"
+	"github.com/BSteffaniak/lazyaws/pkg/constants"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/presentation"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 func runeCount(str string) int {
@@ -77,7 +77,7 @@ func formatWorkingTreeState(rebaseMode enums.RebaseMode) string {
 func (gui *Gui) statusRenderToMain() error {
 	dashboardString := strings.Join(
 		[]string{
-			lazygitTitle(),
+			lazyawsTitle(),
 			"Copyright 2022 Jesse Duffield",
 			fmt.Sprintf("Keybindings: %s", constants.Links.Docs.Keybindings),
 			fmt.Sprintf("Config Options: %s", constants.Links.Docs.Config),
@@ -128,7 +128,7 @@ func (gui *Gui) handleEditConfig() error {
 	return gui.askForConfigFile(gui.helpers.Files.EditFile)
 }
 
-func lazygitTitle() string {
+func lazyawsTitle() string {
 	return `
    _                       _ _
   | |                     (_) |

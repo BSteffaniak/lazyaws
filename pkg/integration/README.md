@@ -1,6 +1,6 @@
 # Integration Tests
 
-The pkg/integration package is for integration testing: that is, actually running a real lazygit session and having a robot pretend to be a human user and then making assertions that everything works as expected.
+The pkg/integration package is for integration testing: that is, actually running a real lazyaws session and having a robot pretend to be a human user and then making assertions that everything works as expected.
 
 TL;DR: integration tests live in pkg/integration/tests. Run integration tests with:
 
@@ -16,13 +16,13 @@ go run cmd/integration_test/main.go cli [--slow or --sandbox] [testname or testp
 
 ## Writing tests
 
-The tests live in pkg/integration/tests. Each test is registered in `pkg/integration/tests/test_list.go` which is an auto-generated file. You can re-generate that file by running `go generate ./...` at the root of the Lazygit repo.
+The tests live in pkg/integration/tests. Each test is registered in `pkg/integration/tests/test_list.go` which is an auto-generated file. You can re-generate that file by running `go generate ./...` at the root of the Lazyaws repo.
 
 Each test has two important steps: the setup step and the run step.
 
 ### Setup step
 
-In the setup step, we prepare a repo with shell commands, for example, creating a merge conflict that will need to be resolved upon opening lazygit. This is all done via the `shell` argument.
+In the setup step, we prepare a repo with shell commands, for example, creating a merge conflict that will need to be resolved upon opening lazyaws. This is all done via the `shell` argument.
 
 ### Run step
 
@@ -63,7 +63,7 @@ The test will run in a VSCode terminal:
 
 ### Sandbox mode
 
-Say you want to do a manual test of how lazygit handles merge-conflicts, but you can't be bothered actually finding a way to create merge conflicts in a repo. To make your life easier, you can simply run a merge-conflicts test in sandbox mode, meaning the setup step is run for you, and then instead of the test driving the lazygit session, you're allowed to drive it yourself.
+Say you want to do a manual test of how lazyaws handles merge-conflicts, but you can't be bothered actually finding a way to create merge conflicts in a repo. To make your life easier, you can simply run a merge-conflicts test in sandbox mode, meaning the setup step is run for you, and then instead of the test driving the lazyaws session, you're allowed to drive it yourself.
 
 To run a test in sandbox mode you can press 's' on a test in the test TUI or in the test runner pass the --sandbox argument.
 
@@ -71,7 +71,7 @@ To run a test in sandbox mode you can press 's' on a test in the test TUI or in 
 
 ### Handle most setup in the `shell` part of the test
 
-Try to do as much setup work as possible in your setup step. For example, if all you're testing is that the user is able to resolve merge conflicts, create the merge conflicts in the setup step. On the other hand, if you're testing to see that lazygit can warn the user about merge conflicts after an attempted merge, it's fine to wait until the run step to actually create the conflicts. If the run step is focused on the thing you're trying to test, the test will run faster and its intent will be clearer.
+Try to do as much setup work as possible in your setup step. For example, if all you're testing is that the user is able to resolve merge conflicts, create the merge conflicts in the setup step. On the other hand, if you're testing to see that lazyaws can warn the user about merge conflicts after an attempted merge, it's fine to wait until the run step to actually create the conflicts. If the run step is focused on the thing you're trying to test, the test will run faster and its intent will be clearer.
 
 ### Create helper functions for (very) frequently used test logic
 

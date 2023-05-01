@@ -648,17 +648,17 @@ type Actions struct {
 }
 
 const englishIntroPopupMessage = `
-Thanks for using lazygit! Seriously you rock. Three things to share with you:
+Thanks for using lazyaws! Seriously you rock. Three things to share with you:
 
- 1) If you want to learn about lazygit's features, watch this vid:
+ 1) If you want to learn about lazyaws's features, watch this vid:
       https://youtu.be/CPLdltN7wgE
 
  2) Be sure to read the latest release notes at:
-      https://github.com/jesseduffield/lazygit/releases
+      https://github.com/BSteffaniak/lazyaws/releases
 
  3) If you're using git, that makes you a programmer! With your help we can make
-    lazygit better, so consider becoming a contributor and joining the fun at
-      https://github.com/jesseduffield/lazygit
+    lazyaws better, so consider becoming a contributor and joining the fun at
+      https://github.com/BSteffaniak/lazyaws
     You can also sponsor me and tell me what to work on by clicking the donate
     button at the bottom right.
     Or even just star the repo to share the love!
@@ -673,7 +673,7 @@ version:
 
 Please refer to
 
-  https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#configuring-file-editing
+  https://github.com/BSteffaniak/lazyaws/blob/master/docs/Config.md#configuring-file-editing
 
 for up-to-date information how to configure your editor.
 
@@ -815,7 +815,7 @@ func EnglishTranslationSet() TranslationSet {
 		UpdateAvailable:                     "Download and install version {{.newVersion}}?",
 		UpdateInProgressWaitingStatus:       "updating",
 		UpdateCompletedTitle:                "Update completed!",
-		UpdateCompleted:                     "Update has been installed successfully. Restart lazygit for it to take effect.",
+		UpdateCompleted:                     "Update has been installed successfully. Restart lazyaws for it to take effect.",
 		FailedToRetrieveLatestVersionErr:    "Failed to retrieve version information",
 		OnLatestVersionErr:                  "You already have the latest version",
 		MajorVersionErr:                     "New version ({{.newVersion}}) has non-backwards compatible changes compared to the current version ({{.currentVersion}})",
@@ -843,7 +843,7 @@ func EnglishTranslationSet() TranslationSet {
 		NoBranchOnRemote:                    `This branch doesn't exist on remote. You need to push it to remote first.`,
 		LcFetch:                             `fetch`,
 		NoAutomaticGitFetchTitle:            `No automatic git fetch`,
-		NoAutomaticGitFetchBody:             `Lazygit can't use "git fetch" in a private repo; use 'f' in the files panel to run "git fetch" manually`,
+		NoAutomaticGitFetchBody:             `Lazyaws can't use "git fetch" in a private repo; use 'f' in the files panel to run "git fetch" manually`,
 		FileEnter:                           `stage individual hunks/lines for file, or collapse/expand for directory`,
 		FileStagingRequirements:             `Can only stage individual lines for tracked files`,
 		StageSelection:                      `toggle line staged / unstaged`,
@@ -939,9 +939,9 @@ func EnglishTranslationSet() TranslationSet {
 		DiscardFileChangesPrompt:            "Are you sure you want to discard this commit's changes to this file? If this file was created in this commit, it will be deleted",
 		DisabledForGPG:                      "Feature not available for users using GPG",
 		CreateRepo:                          "Not in a git repository. Create a new git repository? (y/n): ",
-		BareRepo:                            "You've attempted to open Lazygit in a bare repo but Lazygit does not yet support bare repos. Open most recent repo? (y/n) ",
+		BareRepo:                            "You've attempted to open Lazyaws in a bare repo but Lazyaws does not yet support bare repos. Open most recent repo? (y/n) ",
 		InitialBranch:                       "Branch name? (leave empty for git's default): ",
-		NoRecentRepositories:                "Must open lazygit in a git repository. No valid recent repositories. Exiting.",
+		NoRecentRepositories:                "Must open lazyaws in a git repository. No valid recent repositories. Exiting.",
 		IncorrectNotARepository:             "The value of 'notARepository' is incorrect. It should be one of 'prompt', 'create', 'skip', or 'quit'.",
 		AutoStashTitle:                      "Autostash?",
 		AutoStashPrompt:                     "You must stash and pop your changes to bring them across. Do this automatically? (enter/esc)",
@@ -967,7 +967,7 @@ func EnglishTranslationSet() TranslationSet {
 		LcCommitChangesWithoutHook:          "commit changes without pre-commit hook",
 		SkipHookPrefixNotConfigured:         "You have not configured a commit message prefix for skipping hooks. Set `git.skipHookPrefix = 'WIP'` in your config",
 		LcResetTo:                           `reset to`,
-		PressEnterToReturn:                  "Press enter to return to lazygit",
+		PressEnterToReturn:                  "Press enter to return to lazyaws",
 		LcViewStashOptions:                  "view stash options",
 		LcStashAllChanges:                   "stash all changes",
 		LcStashStagedChanges:                "stash staged changes",
@@ -1099,7 +1099,7 @@ func EnglishTranslationSet() TranslationSet {
 		LcCreateNewBranchFromCommit:         "create new branch off of commit",
 		LcBuildingPatch:                     "building patch",
 		LcViewCommits:                       "view commits",
-		MinGitVersionError:                  "Git version must be at least 2.20 (i.e. from 2018 onwards). Please upgrade your git version. Alternatively raise an issue at https://github.com/jesseduffield/lazygit/issues for lazygit to be more backwards compatible.",
+		MinGitVersionError:                  "Git version must be at least 2.20 (i.e. from 2018 onwards). Please upgrade your git version. Alternatively raise an issue at https://github.com/BSteffaniak/lazyaws/issues for lazyaws to be more backwards compatible.",
 		LcRunningCustomCommandStatus:        "running custom command",
 		LcSubmoduleStashAndReset:            "stash uncommitted submodule changes and update",
 		LcAndResetSubmodules:                "and reset submodules",

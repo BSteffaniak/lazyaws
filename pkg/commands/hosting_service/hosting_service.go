@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	"github.com/jesseduffield/lazygit/pkg/i18n"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/i18n"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/sirupsen/logrus"
 
 	"github.com/jesseduffield/generics/slices"
@@ -21,9 +21,9 @@ import (
 type HostingServiceMgr struct {
 	log       logrus.FieldLogger
 	tr        *i18n.TranslationSet
-	remoteURL string // e.g. https://github.com/jesseduffield/lazygit
+	remoteURL string // e.g. https://github.com/BSteffaniak/lazyaws
 
-	// see https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-pull-request-urls
+	// see https://github.com/BSteffaniak/lazyaws/blob/master/docs/Config.md#custom-pull-request-urls
 	configServiceDomains map[string]string
 }
 

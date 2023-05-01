@@ -3,7 +3,7 @@ package mergeconflicts
 import (
 	"strings"
 
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // State represents the selection state of the merge conflict context.

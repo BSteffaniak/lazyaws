@@ -1,6 +1,6 @@
 # Custom Pagers
 
-Lazygit supports custom pagers, [configured](/docs/Config.md) in the config.yml file (which can be opened by pressing `o` in the Status panel).
+Lazyaws supports custom pagers, [configured](/docs/Config.md) in the config.yml file (which can be opened by pressing `o` in the Status panel).
 
 Support does not extend to Windows users, because we're making use of a package which doesn't have Windows support.
 
@@ -61,4 +61,4 @@ git:
     useConfig: true
 ```
 
-If you set `useConfig: true`, lazygit will use whatever pager is specified in `$GIT_PAGER`, `$PAGER`, or your *git config*. If the pager ends with something like ` | less` we will strip that part out, because less doesn't play nice with our rendering approach. If the custom pager uses less under the hood, that will also break rendering (hence the `--paging=never` flag for the `delta` pager).
+If you set `useConfig: true`, lazyaws will use whatever pager is specified in `$GIT_PAGER`, `$PAGER`, or your *git config*. If the pager ends with something like ` | less` we will strip that part out, because less doesn't play nice with our rendering approach. If the custom pager uses less under the hood, that will also break rendering (hence the `--paging=never` flag for the `delta` pager).

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/sirupsen/logrus"
 )
 
@@ -146,7 +146,7 @@ func (self *cmdObjRunner) RunAndProcessLines(cmdObj ICmdObj, onLine func(line st
 	}
 
 	if cmdObj.GetCredentialStrategy() != NONE {
-		return errors.New("cannot call RunAndProcessLines with credential strategy. If you're seeing this then a contributor to Lazygit has accidentally called this method! Please raise an issue")
+		return errors.New("cannot call RunAndProcessLines with credential strategy. If you're seeing this then a contributor to Lazyaws has accidentally called this method! Please raise an issue")
 	}
 
 	if cmdObj.ShouldLog() {

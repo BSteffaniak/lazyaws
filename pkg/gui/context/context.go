@@ -1,7 +1,7 @@
 package context
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 const (

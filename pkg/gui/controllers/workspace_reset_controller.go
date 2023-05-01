@@ -3,8 +3,8 @@ package controllers
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 // this is in its own file given that the workspace controller file is already quite long
@@ -75,7 +75,7 @@ func (self *FilesController) createResetMenu() error {
 				if !self.helpers.WorkingTree.IsWorkingTreeDirty() {
 					return self.c.ErrorMsg(self.c.Tr.NoTrackedStagedFilesStash)
 				}
-				if err := self.git.Stash.SaveStagedChanges("[lazygit] tmp stash"); err != nil {
+				if err := self.git.Stash.SaveStagedChanges("[lazyaws] tmp stash"); err != nil {
 					return self.c.Error(err)
 				}
 				if err := self.git.Stash.DropNewest(); err != nil {

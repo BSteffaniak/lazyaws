@@ -12,17 +12,17 @@ import (
 	"github.com/go-errors/errors"
 
 	"github.com/jesseduffield/generics/slices"
-	appTypes "github.com/jesseduffield/lazygit/pkg/app/types"
-	"github.com/jesseduffield/lazygit/pkg/commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/constants"
-	"github.com/jesseduffield/lazygit/pkg/env"
-	"github.com/jesseduffield/lazygit/pkg/gui"
-	"github.com/jesseduffield/lazygit/pkg/i18n"
-	"github.com/jesseduffield/lazygit/pkg/updates"
+	appTypes "github.com/BSteffaniak/lazyaws/pkg/app/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/constants"
+	"github.com/BSteffaniak/lazyaws/pkg/env"
+	"github.com/BSteffaniak/lazyaws/pkg/gui"
+	"github.com/BSteffaniak/lazyaws/pkg/i18n"
+	"github.com/BSteffaniak/lazyaws/pkg/updates"
 )
 
 // App is the struct that's instantiated from within main.go and it manages

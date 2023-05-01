@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 
 	"github.com/jesseduffield/lazycore/pkg/utils"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
 )
 
 const (
@@ -39,7 +39,7 @@ func RunTests(
 
 	testDir := filepath.Join(projectRootDir, "test", "results")
 
-	if err := buildLazygit(); err != nil {
+	if err := buildLazyaws(); err != nil {
 		return err
 	}
 
@@ -101,7 +101,7 @@ func runTest(
 		return err
 	}
 
-	cmd, err := getLazygitCommand(test, paths, projectRootDir, sandbox, keyPressDelay)
+	cmd, err := getLazyawsCommand(test, paths, projectRootDir, sandbox, keyPressDelay)
 	if err != nil {
 		return err
 	}
@@ -130,14 +130,14 @@ func prepareTestDir(
 	return createFixture(test, paths, rootDir)
 }
 
-func buildLazygit() error {
+func buildLazyaws() error {
 	// // TODO: remove this line!
 	// // skipping this because I'm not making changes to the app code atm.
 	// return nil
 
 	osCommand := oscommands.NewDummyOSCommand()
 	return osCommand.Cmd.New(fmt.Sprintf(
-		"go build -o %s pkg/integration/clients/injector/main.go", tempLazygitPath(),
+		"go build -o %s pkg/integration/clients/injector/main.go", tempLazyawsPath(),
 	)).Run()
 }
 
@@ -166,7 +166,7 @@ func getGitVersion() (*git_commands.GitVersion, error) {
 	return git_commands.ParseGitVersion(versionStr)
 }
 
-func getLazygitCommand(test *IntegrationTest, paths Paths, rootDir string, sandbox bool, keyPressDelay int) (*exec.Cmd, error) {
+func getLazyawsCommand(test *IntegrationTest, paths Paths, rootDir string, sandbox bool, keyPressDelay int) (*exec.Cmd, error) {
 	osCommand := oscommands.NewDummyOSCommand()
 
 	err := os.RemoveAll(paths.Config())
@@ -180,7 +180,7 @@ func getLazygitCommand(test *IntegrationTest, paths Paths, rootDir string, sandb
 		return nil, err
 	}
 
-	cmdStr := fmt.Sprintf("%s -debug --use-config-dir=%s --path=%s %s", tempLazygitPath(), paths.Config(), paths.ActualRepo(), test.ExtraCmdArgs())
+	cmdStr := fmt.Sprintf("%s -debug --use-config-dir=%s --path=%s %s", tempLazyawsPath(), paths.Config(), paths.ActualRepo(), test.ExtraCmdArgs())
 
 	cmdObj := osCommand.Cmd.New(cmdStr)
 
@@ -198,8 +198,8 @@ func getLazygitCommand(test *IntegrationTest, paths Paths, rootDir string, sandb
 	return cmdObj.GetCmd(), nil
 }
 
-func tempLazygitPath() string {
-	return filepath.Join("/tmp", "lazygit", "test_lazygit")
+func tempLazyawsPath() string {
+	return filepath.Join("/tmp", "lazyaws", "test_lazyaws")
 }
 
 func findOrCreateDir(path string) {

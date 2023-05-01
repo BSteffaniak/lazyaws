@@ -4,7 +4,7 @@ import (
 	"unicode"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/keybindings"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/keybindings"
 )
 
 func (gui *Gui) handleEditorKeypress(textArea *gocui.TextArea, key gocui.Key, ch rune, mod gocui.Modifier, allowMultiline bool) bool {

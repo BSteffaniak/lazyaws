@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/patch"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/patch"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type StagingController struct {

@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
 	"github.com/sirupsen/logrus"
 )
 

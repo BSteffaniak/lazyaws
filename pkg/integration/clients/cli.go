@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/generics/slices"
-	"github.com/jesseduffield/lazygit/pkg/integration/components"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests"
 	"github.com/samber/lo"
 )
 
@@ -20,7 +20,7 @@ import (
 // building our injector program (in the sibling injector directory) and then for
 // each test we're running, invoke the injector program with the test's name as
 // an environment variable. Then the injector finds the test and passes it to
-// the lazygit startup code.
+// the lazyaws startup code.
 
 // If invoked directly, you can specify tests to run by passing their names as positional arguments
 
@@ -81,7 +81,7 @@ outer:
 				continue outer
 			}
 		}
-		log.Fatalf("test %s not found. Perhaps you forgot to add it to `pkg/integration/integration_tests/test_list.go`? This can be done by running `go generate ./...` from the Lazygit root. You'll need to ensure that your test name and the file name match (where the test name is in PascalCase and the file name is in snake_case).", testName)
+		log.Fatalf("test %s not found. Perhaps you forgot to add it to `pkg/integration/integration_tests/test_list.go`? This can be done by running `go generate ./...` from the Lazyaws root. You'll need to ensure that your test name and the file name match (where the test name is in PascalCase and the file name is in snake_case).", testName)
 	}
 
 	return testsToRun

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/go-errors/errors"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
 	"github.com/stretchr/testify/assert"
 )
 

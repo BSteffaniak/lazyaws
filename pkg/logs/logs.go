@@ -6,10 +6,10 @@ import (
 	"os"
 
 	"github.com/aybabtme/humanlog"
-	"github.com/jesseduffield/lazygit/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
 )
 
-// TailLogs lets us run `lazygit --logs` to print the logs produced by other lazygit processes.
+// TailLogs lets us run `lazyaws --logs` to print the logs produced by other lazyaws processes.
 // This makes for easier debugging.
 func TailLogs() {
 	logFilePath, err := config.LogPath()
@@ -25,7 +25,7 @@ func TailLogs() {
 	_, err = os.Stat(logFilePath)
 	if err != nil {
 		if os.IsNotExist(err) {
-			log.Fatal("Log file does not exist. Run `lazygit --debug` first to create the log file")
+			log.Fatal("Log file does not exist. Run `lazyaws --debug` first to create the log file")
 		}
 		log.Fatal(err)
 	}

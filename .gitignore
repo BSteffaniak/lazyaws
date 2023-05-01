@@ -17,8 +17,8 @@ test/repos/repo
 coverage.txt
 
 # Binaries
-lazygit
-lazygit.exe
+lazyaws
+lazyaws.exe
 
 # Exceptions
 !.gitignore

@@ -14,9 +14,9 @@ import (
 	"github.com/atotto/clipboard"
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/kill"
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // OSCommand holds all the os commands
@@ -277,8 +277,8 @@ func (c *OSCommand) GetTempDir() string {
 	return c.tempDir
 }
 
-// GetLazygitPath returns the path of the currently executed file
-func GetLazygitPath() string {
+// GetLazyawsPath returns the path of the currently executed file
+func GetLazyawsPath() string {
 	ex, err := os.Executable() // get the executable path for git to use
 	if err != nil {
 		ex = os.Args[0] // fallback to the first call argument if needed
@@ -294,6 +294,6 @@ func (c *OSCommand) UpdateWindowTitle() error {
 	if getWdErr != nil {
 		return getWdErr
 	}
-	argString := fmt.Sprint("title ", filepath.Base(path), " - Lazygit")
+	argString := fmt.Sprint("title ", filepath.Base(path), " - Lazyaws")
 	return c.Cmd.NewShell(argString).Run()
 }

@@ -5,12 +5,12 @@ import (
 	"log"
 	"os"
 
-	"github.com/jesseduffield/lazygit/pkg/integration/clients"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/clients"
 )
 
 var usage = `
 Usage:
-	See https://github.com/jesseduffield/lazygit/tree/master/pkg/integration/README.md
+	See https://github.com/BSteffaniak/lazyaws/tree/master/pkg/integration/README.md
 
 	CLI mode:
 		> go run cmd/integration_test/main.go cli [--slow] [--sandbox] <test1> <test2> ...

@@ -10,11 +10,11 @@ import (
 	"github.com/jesseduffield/generics/slices"
 	"github.com/jesseduffield/gocui"
 	"github.com/jesseduffield/lazycore/pkg/utils"
-	"github.com/jesseduffield/lazygit/pkg/gui"
-	"github.com/jesseduffield/lazygit/pkg/gui/style"
-	"github.com/jesseduffield/lazygit/pkg/integration/components"
-	"github.com/jesseduffield/lazygit/pkg/integration/tests"
-	"github.com/jesseduffield/lazygit/pkg/secureexec"
+	"github.com/BSteffaniak/lazyaws/pkg/gui"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/style"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/integration/tests"
+	"github.com/BSteffaniak/lazyaws/pkg/secureexec"
 )
 
 // This program lets you run integration tests from a TUI. See pkg/integration/README.md for more info.

@@ -4,15 +4,15 @@ import (
 	"os"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
-// when a user runs lazygit with the LAZYGIT_NEW_DIR_FILE env variable defined
+// when a user runs lazyaws with the LAZYAWS_NEW_DIR_FILE env variable defined
 // we will write the current directory to that file on exit so that their
 // shell can then change to that directory. That means you don't get kicked
 // back to the directory that you started with.
 func (gui *Gui) recordCurrentDirectory() error {
-	// determine current directory, set it in LAZYGIT_NEW_DIR_FILE
+	// determine current directory, set it in LAZYAWS_NEW_DIR_FILE
 	dirName, err := os.Getwd()
 	if err != nil {
 		return err
@@ -21,7 +21,7 @@ func (gui *Gui) recordCurrentDirectory() error {
 }
 
 func (gui *Gui) recordDirectory(dirName string) error {
-	newDirFilePath := os.Getenv("LAZYGIT_NEW_DIR_FILE")
+	newDirFilePath := os.Getenv("LAZYAWS_NEW_DIR_FILE")
 	if newDirFilePath == "" {
 		return nil
 	}

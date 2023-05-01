@@ -4,11 +4,11 @@ import (
 	"strings"
 
 	"github.com/jesseduffield/gocui"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
-	"github.com/jesseduffield/lazygit/pkg/gui/context"
-	"github.com/jesseduffield/lazygit/pkg/gui/filetree"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/context"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/filetree"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type FilesController struct {
@@ -220,7 +220,7 @@ func (self *FilesController) optimisticUnstage(file *models.File) bool {
 }
 
 // Running a git add command followed by a git status command can take some time (e.g. 200ms).
-// Given how often users stage/unstage files in Lazygit, we're adding some
+// Given how often users stage/unstage files in Lazyaws, we're adding some
 // optimistic rendering to make things feel faster. When we go to stage
 // a file, we'll first update that file's status in-memory, then re-render
 // the files panel. Then we'll immediately do a proper git status call

@@ -1,8 +1,8 @@
 package bisect
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/config"
-	. "github.com/jesseduffield/lazygit/pkg/integration/components"
+	"github.com/BSteffaniak/lazyaws/pkg/config"
+	. "github.com/BSteffaniak/lazyaws/pkg/integration/components"
 )
 
 var Basic = NewIntegrationTest(NewIntegrationTestArgs{
@@ -41,7 +41,7 @@ var Basic = NewIntegrationTest(NewIntegrationTestArgs{
 			SelectedLine(Contains("<-- bad")).
 			NavigateToLine(Contains("commit 02")).
 			Tap(markCommitAsGood).
-			// lazygit will land us in the commit between our good and bad commits.
+			// lazyaws will land us in the commit between our good and bad commits.
 			SelectedLine(Contains("commit 05").Contains("<-- current")).
 			Tap(markCommitAsBad).
 			SelectedLine(Contains("commit 04").Contains("<-- current")).

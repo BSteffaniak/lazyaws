@@ -1,7 +1,7 @@
 package cherrypicking
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/commands/models"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/models"
 )
 
 type CherryPicking struct {

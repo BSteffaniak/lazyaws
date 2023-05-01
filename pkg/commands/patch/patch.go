@@ -1,7 +1,7 @@
 package patch
 
 import (
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 	"github.com/samber/lo"
 )
 

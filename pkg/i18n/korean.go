@@ -1,17 +1,17 @@
 package i18n
 
 const koreanIntroPopupMessage = `
-lazygit!를 이용해주셔서 감사합니다. Seriously you rock. Three things to share with you:
+lazyaws!를 이용해주셔서 감사합니다. Seriously you rock. Three things to share with you:
 
- 1) lazygit의 기능에 대해 알아보려면 다음 비디오를 참조하세요.
+ 1) lazyaws의 기능에 대해 알아보려면 다음 비디오를 참조하세요.
       https://youtu.be/CPLdltN7wgE
 
  2) 다음 사이트에서 최신 릴리스 노트를 읽어보세요.:
-      https://github.com/jesseduffield/lazygit/releases
+      https://github.com/BSteffaniak/lazyaws/releases
 
  3) 만약 당신이 Git을 사용한다면, 그것은 당신을 프로그래머로 만들 것입니다!
-	 당신의 도움으로 우리는 lazygit을 더 좋게 만들 수 있습니다, 그러니 기여자가 되는 것을 고려해보세요. 그리고 재미에 참여하세요:
-      https://github.com/jesseduffield/lazygit
+	 당신의 도움으로 우리는 lazyaws을 더 좋게 만들 수 있습니다, 그러니 기여자가 되는 것을 고려해보세요. 그리고 재미에 참여하세요:
+      https://github.com/BSteffaniak/lazyaws
     또한 오른쪽 하단의 기부 버튼을 클릭하여 저를 후원하고 작업할 내용을 알려주실 수 있습니다.
     또는 저장소에 스타를 눌러 사랑을 공유할 수도 있습니다!
 `
@@ -142,7 +142,7 @@ func koreanTranslationSet() TranslationSet {
 		UpdateAvailable:                     "버전 {{.newVersion}} 을(를) 설치하시겠습니까?",
 		UpdateInProgressWaitingStatus:       "업데이트 중",
 		UpdateCompletedTitle:                "업데이트 완료!",
-		UpdateCompleted:                     "업데이트 설치에 성공했습니다. lazygit를 재시작해주세요.",
+		UpdateCompleted:                     "업데이트 설치에 성공했습니다. lazyaws를 재시작해주세요.",
 		FailedToRetrieveLatestVersionErr:    "버전 정보를 받아오는데 실패했습니다.",
 		OnLatestVersionErr:                  "이미 최신 버전을 사용하고 있습니다.",
 		MajorVersionErr:                     "새 버전 ({{.newVersion}}) 에 현재 버전({{.currentVersion}}) 과 비교할 때 호환되지 않는 변경 사항이 있습니다.",
@@ -168,7 +168,7 @@ func koreanTranslationSet() TranslationSet {
 		NoBranchOnRemote:                    `브랜치가 원격에 없습니다. 원격에 먼저 푸시해야합니다.`,
 		LcFetch:                             `fetch`,
 		NoAutomaticGitFetchTitle:            `자동 git 업데이트) 없음`,
-		NoAutomaticGitFetchBody:             `Lazygit은 private 저장소에서 "git fetch"를 사용할 수 없습니다. 파일 패널에서 'f'를 사용하여 "git fetch"를 수동으로 실행하세요.`,
+		NoAutomaticGitFetchBody:             `Lazyaws은 private 저장소에서 "git fetch"를 사용할 수 없습니다. 파일 패널에서 'f'를 사용하여 "git fetch"를 수동으로 실행하세요.`,
 		FileEnter:                           `stage individual hunks/lines for file, or collapse/expand for directory`,
 		FileStagingRequirements:             `추적된 파일에 대해 개별 라인만 stage할 수 있습니다.`,
 		StageSelection:                      `선택한 행을 staged / unstaged`,
@@ -279,7 +279,7 @@ func koreanTranslationSet() TranslationSet {
 		LcCommitChangesWithoutHook:          "commit changes without pre-commit hook",
 		SkipHookPrefixNotConfigured:         "You have not configured a commit message prefix for skipping hooks. Set `git.skipHookPrefix = 'WIP'` in your config",
 		LcResetTo:                           `reset to`,
-		PressEnterToReturn:                  "엔터를 눌러 lazygit으로 돌아갑니다.",
+		PressEnterToReturn:                  "엔터를 눌러 lazyaws으로 돌아갑니다.",
 		LcViewStashOptions:                  "Stash 옵션 보기",
 		LcStashAllChanges:                   "변경사항을 Stash",
 		LcStashStagedChanges:                "stash staged changes",
@@ -402,7 +402,7 @@ func koreanTranslationSet() TranslationSet {
 		LcCreateNewBranchFromCommit:         "커밋에서 새 브랜치를 만듭니다.",
 		LcBuildingPatch:                     "building patch",
 		LcViewCommits:                       "커밋 보기",
-		MinGitVersionError:                  "lazygit 실행을 위해서는 Git 2.20 이후의 버전(2018년 이후의)이 필요합니다. Git를 업데이트 해주세요. 아니면 lazygit이 이전 버전과 더 잘 호환되도록 https://github.com/jesseduffield/lazygit/issues 에 issue를 작성해 주세요.",
+		MinGitVersionError:                  "lazyaws 실행을 위해서는 Git 2.20 이후의 버전(2018년 이후의)이 필요합니다. Git를 업데이트 해주세요. 아니면 lazyaws이 이전 버전과 더 잘 호환되도록 https://github.com/BSteffaniak/lazyaws/issues 에 issue를 작성해 주세요.",
 		LcRunningCustomCommandStatus:        "커스텀 명령어 실행",
 		LcSubmoduleStashAndReset:            "stash uncommitted submodule changes and update",
 		LcAndResetSubmodules:                "and reset submodules",

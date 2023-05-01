@@ -3,9 +3,9 @@ package helpers
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/gui/types"
+	"github.com/BSteffaniak/lazyaws/pkg/commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/gui/types"
 )
 
 type GpgHelper struct {
@@ -27,7 +27,7 @@ func NewGpgHelper(
 }
 
 // Currently there is a bug where if we switch to a subprocess from within
-// WithWaitingStatus we get stuck there and can't return to lazygit. We could
+// WithWaitingStatus we get stuck there and can't return to lazyaws. We could
 // fix this bug, or just stop running subprocesses from within there, given that
 // we don't need to see a loading status if we're in a subprocess.
 // TODO: we shouldn't need to use a shell here, but looks like that NewShell function contains some windows specific quoting stuff. We should centralise that.

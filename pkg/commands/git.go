@@ -9,13 +9,13 @@ import (
 	"github.com/sasha-s/go-deadlock"
 
 	gogit "github.com/jesseduffield/go-git/v5"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_commands"
-	"github.com/jesseduffield/lazygit/pkg/commands/git_config"
-	"github.com/jesseduffield/lazygit/pkg/commands/oscommands"
-	"github.com/jesseduffield/lazygit/pkg/commands/patch"
-	"github.com/jesseduffield/lazygit/pkg/common"
-	"github.com/jesseduffield/lazygit/pkg/env"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_commands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/git_config"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/oscommands"
+	"github.com/BSteffaniak/lazyaws/pkg/commands/patch"
+	"github.com/BSteffaniak/lazyaws/pkg/common"
+	"github.com/BSteffaniak/lazyaws/pkg/env"
+	"github.com/BSteffaniak/lazyaws/pkg/utils"
 )
 
 // GitCommand is our main git interface
@@ -203,7 +203,7 @@ func navigateToRepoRootDirectory(stat func(string) (os.FileInfo, error), chdir f
 		if atRoot {
 			// we should never really land here: the code that creates GitCommand should
 			// verify we're in a git directory
-			return errors.New("Must open lazygit in a git repository")
+			return errors.New("Must open lazyaws in a git repository")
 		}
 	}
 }
